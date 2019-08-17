@@ -12,7 +12,6 @@
     .filter($el => $el.hostname !== location.hostname)
     .forEach($el => $el.target = '_blank');
 
-
   // Podcast
 
   //const podcastRSS = '/podcast/rss';
