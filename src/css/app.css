@@ -1,0 +1,304 @@
+:root {
+    --theme-white: #fff;
+    --theme-black: #000;
+    --theme-lighter-gray: #efefef;
+    --theme-light-gray: #dfdede;
+    --theme-gray: #8e8e8e;
+    --theme-red: #f00045;
+    --theme-dark-red: #94182b;
+    --theme-blue: #00306a;
+    --theme-dark-blue: #1a385c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+article {
+    font-size: 1.4rem;
+}
+
+article > section {
+    margin: 0;
+    padding: 1rem;
+}
+
+article > section > div {
+    max-width: 114rem;
+    margin: 0 auto;
+    color: var(--theme-gray);
+}
+
+article > section > div > h1,
+article > section > div > h2 {
+    padding: 0;
+    margin: 0.5em 0;
+}
+
+article > section > div > h1 {
+    font-size: 2.6rem;
+    font-weight: normal;
+    margin-bottom: 2em;
+    color: var(--theme-black);
+}
+
+article > section > div > h2 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: var(--theme-gray);
+    margin-top: 9rem;
+}
+
+article > section > div > h2:after {
+    content: '—';
+    display: inline-block;
+    position: relative;
+    top: 0.4em;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+header > div {
+    text-align: center;
+    background: var(--theme-white);
+    border-bottom: 1px solid var(--theme-light-gray);
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+}
+
+#logo {
+    display: inline-block;
+    background-image: url('../img/logo.svg');
+    background-repeat: no-repeat;
+    width: 24.5rem;
+    height: 4rem;
+    margin: 5.4rem 0;
+    justify-self: center;
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+    font-size: 2.6rem;
+    width: 100%;
+    height: 46rem;
+    background-image: url('https://placeimg.com/2880/1000/people/3');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#hero > div {
+    text-align: center;
+    color: var(--theme-white);
+}
+
+#hero p {
+    display: inline-block;
+    margin: 1em;
+    text-align: center;
+    max-width: 59%;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero b {
+    display: inline-block;
+    font-weight: bold;
+    border-bottom: 0.3rem solid var(--theme-red);
+}
+
+header nav {
+    border-bottom: 0.5rem solid var(--theme-red);
+    border-left: 1px solid var(--theme-light-gray);
+    border-right: 1px solid var(--theme-light-gray);
+    justify-self: center;
+    background: var(--theme-white);
+    margin-top: -1px;
+}
+
+ul[itemtype='https://schema.org/SiteNavigationElement'] {
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+}
+
+ul[itemtype='https://schema.org/SiteNavigationElement'] li {
+    display: inline-block;
+}
+
+ul[itemtype='https://schema.org/SiteNavigationElement'] li a {
+    display: inline-block;
+    padding: 1em 5em;
+    text-decoration: none;
+    color: var(--theme-gray);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
+    color: var(--theme-dark-blue);
+}
+
+#home > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    margin: 10rem auto;
+}
+
+#home > div > * {
+    justify-self: center;
+    align-self: center;
+}
+
+#home h3 {
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: var(--theme-dark-red);
+    margin-right: 13rem;
+}
+
+#home h3:after {
+    content: none;
+    display: none;
+}
+
+#home p {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+    color: var(--theme-gray);
+    line-height: 2em;
+}
+
+#about,
+#contact {
+    background-color: var(--theme-lighter-gray);
+}
+
+#practice-areas {
+    background-color: var(--theme-blue);
+}
+
+#about div[itemprop="mainContentOfPage"] {
+    line-height: 2em;
+    font-size: 1.8rem;
+}
+
+#partners {
+    padding: 0;
+    margin: 7.6rem 0 0 0;
+    list-style: none;
+}
+
+#partners li {
+    margin-bottom: 5rem;
+}
+
+#partners li > div {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    border: 1px solid var(--theme-light-gray);
+    max-height: 40rem;
+}
+
+#partners li > div > img {
+    display: block;
+}
+
+#partners li > div:after {
+    display: block;
+    width: 6rem;
+    border-bottom: 0.6rem solid var(--theme-dark-blue);
+    content: ' ';
+    position: absolute;
+    top: 6rem;
+    left: 37rem;
+}
+
+#partners li:nth-child(even) > div:after {
+    border-color: var(--theme-dark-red);
+}
+
+#partners li h3 {
+    font-size: 2.6rem;
+    font-weight: normal;
+    color: var(--theme-dark-blue);
+}
+
+#partners li:nth-child(even) h3 {
+    color: var(--theme-dark-red);
+}
+
+#partners li div[itemprop='description'] {
+    max-height: 30rem;
+    overflow-y: auto;
+    margin: 5rem 1rem 5rem 9rem;
+    padding-right: 5rem;
+}
+
+/*
+ * Device: Desktops
+ * Screen: 1281px to higher resolution desktops
+ */
+@media (min-width: 1281px) {
+
+}
+
+/*
+ * Device: Laptops, Desktops
+ * Screen: B/w 1025px to 1280px
+ */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+/*
+ * Device: Tablets, Ipads (portrait)
+ * Screen: B/w 768px to 1024px
+ */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/*
+ * Device: Tablets, Ipads (landscape)
+ * Screen: B/w 768px to 1024px
+ */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+/*
+ * Device: Low Resolution Tablets, Mobiles (Landscape)
+ * Screen: B/w 481px to 767px
+ */
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/*
+ * Device: Most of the Smartphones Mobiles (Portrait)
+ * Screen: B/w 320px to 479px
+ */
+@media (min-width: 320px) and (max-width: 480px) {
+
+}
