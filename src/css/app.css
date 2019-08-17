@@ -1,10 +1,10 @@
 :root {
     --theme-black: #000;
     --theme-blue: #006ba7;
-    --theme-dark-blue: #00306a;
+    --theme-dark-blue: #1a385c;
+    --theme-darker-blue: #00306a;
     --theme-dark-gray: #4e4e4e;
     --theme-dark-red: #94182b;
-    --theme-darker-blue: #1a385c;
     --theme-gray: #8e8e8e;
     --theme-light-gray: #dfdede;
     --theme-lighter-gray: #efefef;
@@ -32,7 +32,8 @@ article > section {
     padding: 1rem;
 }
 
-article > section > div {
+article > section > div,
+article > footer > div {
     color: var(--theme-gray);
     margin: 0 auto;
     max-width: 114rem;
@@ -80,18 +81,27 @@ header {
 header > div {
     background: var(--theme-white);
     border-bottom: 1px solid var(--theme-light-gray);
-    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.25);
     text-align: center;
 }
 
-#logo {
+#logo,
+#logo-small {
     background-image: url('../img/logo.svg');
     background-repeat: no-repeat;
     display: inline-block;
+}
+
+#logo {
     height: 4rem;
     justify-self: center;
     margin: 5.4rem 0;
     width: 24.5rem;
+}
+
+#logo-small {
+    height: 2.6rem;
+    width: 18rem;
 }
 
 #hero {
@@ -135,17 +145,17 @@ header nav {
     margin-top: -1px;
 }
 
-ul[itemtype='https://schema.org/SiteNavigationElement'] {
+header nav ul {
     display: block;
     margin: 0 auto;
     padding: 0;
 }
 
-ul[itemtype='https://schema.org/SiteNavigationElement'] li {
+header nav ul li {
     display: inline-block;
 }
 
-ul[itemtype='https://schema.org/SiteNavigationElement'] li a {
+header nav ul li a {
     color: var(--theme-gray);
     display: inline-block;
     font-size: 1.4rem;
@@ -154,8 +164,8 @@ ul[itemtype='https://schema.org/SiteNavigationElement'] li a {
     text-decoration: none;
 }
 
-ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
-    color: var(--theme-darker-blue);
+header nav ul li a:hover {
+    color: var(--theme-dark-blue);
 }
 
 #home > div {
@@ -225,7 +235,7 @@ ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
 }
 
 #partners li > div:after {
-    border-bottom: 0.6rem solid var(--theme-darker-blue);
+    border-bottom: 0.6rem solid var(--theme-dark-blue);
     content: ' ';
     display: block;
     left: 37rem;
@@ -239,7 +249,7 @@ ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
 }
 
 #partners li h3 {
-    color: var(--theme-darker-blue);
+    color: var(--theme-dark-blue);
     font-size: 2.6rem;
     font-weight: normal;
 }
@@ -256,7 +266,7 @@ ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
 }
 
 #practice-areas {
-    background-color: var(--theme-dark-blue);
+    background-color: var(--theme-darker-blue);
     font-size: 1.8rem;
     line-height: 1.5em;
 }
@@ -285,7 +295,7 @@ ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
 }
 
 #practice-areas ul > li > a:hover {
-    color: var(--theme-darker-blue);
+    color: var(--theme-dark-blue);
 }
 
 #practice-areas ul > li.active > a {
@@ -306,8 +316,12 @@ ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
     width: calc(100% - 40rem);
 }
 
+#contact {
+    padding-bottom: 10rem;
+}
+
 #contact h1 {
-    color: var(--theme-darker-blue);
+    color: var(--theme-dark-blue);
 }
 
 #contact a {
@@ -316,7 +330,7 @@ ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
 }
 
 #contact a:hover {
-    color: var(--theme-dark-blue);
+    color: var(--theme-red);
 }
 
 #contact div[itemprop='mainContentOfPage'] {
@@ -354,6 +368,12 @@ ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
     margin-bottom: 1em;
     padding: 1em;
     width: 100%;
+    outline: none;
+}
+
+#contact form fieldset input:focus,
+#contact form fieldset textarea:focus {
+    border: 1px solid var(--theme-dark-gray);
 }
 
 #contact form input[type='submit'] {
@@ -364,6 +384,10 @@ ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
     font-size: 1.4rem;
     margin-top: 2em;
     padding: 1em 5em;
+}
+
+#contact form input[type='submit']:hover {
+    background: var(--theme-red);
 }
 
 #contact address {
@@ -399,13 +423,48 @@ ul[itemtype='https://schema.org/SiteNavigationElement'] li a:hover {
 
 #contact div[itemprop='founder']:nth-child(even) span[itemprop='givenName'],
 #contact div[itemprop='founder']:nth-child(even) span[itemprop='familyName'] {
-    color: var(--theme-dark-blue);
+    color: var(--theme-darker-blue);
 }
 
 #contact div[itemprop='founder'] + span {
     display: block;
     margin-top: 2em;
     color: var(--theme-dark-gray);
+}
+
+article > footer {
+    background: var(--theme-dark-blue);
+}
+
+article > footer > div {
+    padding: 10rem 0;
+    color: var(--theme-white);
+}
+
+article > footer nav {
+    margin: 0 0 4rem 10rem;
+}
+
+article > footer nav,
+article > footer nav ul,
+article > footer nav ul li {
+    display: inline-block;
+}
+
+article > footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+article > footer nav ul li a {
+    color: var(--theme-white);
+    text-decoration: none;
+    padding: 1em 3em;
+}
+
+article > footer nav ul li a:hover {
+    color: var(--theme-red);
 }
 
 /*
