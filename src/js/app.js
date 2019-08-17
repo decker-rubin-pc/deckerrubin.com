@@ -1,4 +1,17 @@
 (async () => {
+  const getPodcastItemHTML = ({id, title}) => `<iframe
+      title="${title}"
+      itemprop="audio"
+      itemscope
+      itemtype="http://schema.org/AudioObject"
+      width="100%"
+      height="20"
+      scrolling="no"
+      frameborder="no"
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${id}&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+    ></iframe>`;
+
   // Register service worker
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
@@ -45,4 +58,16 @@
 
   const result = await response.json();
   console.log(result);
+
+  // @todo Rework this so we have a player at the bottom of the page.
+  if (result.collection) {
+    const $podcastList = document.querySelector('#podcast ul');
+
+    $podcastList.innerHTML = result
+      .collection
+      .filter(item => item.public)
+      .map(getPodcastItemHTML)
+      .map(html => `<li>${html}</li>`)
+      .join('');
+  }
 })();

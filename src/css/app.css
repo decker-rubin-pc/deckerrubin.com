@@ -318,12 +318,27 @@ header nav ul li a:hover {
     width: calc(100% - 40rem);
 }
 
-#contact {
+#podcast h1,
+#contact h1 {
+    color: var(--theme-dark-blue);
+}
+
+#podcast > div {
     padding-bottom: 10rem;
 }
 
-#contact h1 {
-    color: var(--theme-dark-blue);
+#podcast ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#podcast ul li {
+    margin-bottom: 1rem;
+}
+
+#contact {
+    padding-bottom: 10rem;
 }
 
 #contact a {
