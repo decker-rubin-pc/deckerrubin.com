@@ -1,17 +1,4 @@
 (async () => {
-  const getPodcastItemHTML = ({id, title}) => `<iframe
-      title="${title}"
-      itemprop="audio"
-      itemscope
-      itemtype="http://schema.org/AudioObject"
-      width="100%"
-      height="20"
-      scrolling="no"
-      frameborder="no"
-      allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${id}&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
-    ></iframe>`;
-
   // Register service worker
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
@@ -51,6 +38,62 @@
 
   // Podcast
 
+  const $podcastPlayerContent = document.querySelector('#podcast-player .content');
+  const $podcastPlayerCloseButton = document.getElementById('podcast-player-close-button');
+
+  const getPodcastPlayer = ({id, title}) => {
+    const options = {
+      color: '#f00045',
+      inverse: false,
+      auto_play: true,
+      show_user: true,
+      download: true,
+      single_active: true,
+      hide_related: false,
+      show_comments: true,
+      show_reposts: false,
+      show_teaser: true
+    };
+
+    const sOptions = Object
+      .keys(options)
+      .reduce((arr, key) => [...arr, `${encodeURIComponent(key)}=${encodeURIComponent(options[key])}`], [])
+      .join('&');
+
+    const height = 166; // Full player
+
+    return `<iframe
+      title="${title}"
+      itemprop="audio"
+      itemscope
+      itemtype="http://schema.org/AudioObject"
+      width="100%"
+      height="${height}"
+      scrolling="no"
+      frameborder="no"
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${id}&${sOptions}"
+    ></iframe>`;
+  };
+
+  const getPodcastItemHTML = ({id, title}) =>
+    `<a href='#' data-podcast-id='${id}' data-podcast-title='${title}'>${title}</a>`;
+
+  const playPodcast = data => {
+    $podcastPlayerContent.innerHTML = getPodcastPlayer(data);
+    document.body.classList.add('podcast-active');
+  };
+
+  const stopPodcast = () => {
+    $podcastPlayerContent.innerHTML = '';
+    document.body.classList.remove('podcast-active');
+  };
+
+  $podcastPlayerCloseButton.addEventListener('click', e => {
+    stopPodcast();
+    e.preventDefault();
+  });
+
   //const podcastRSS = '/podcast/rss';
   //const response = await fetch(podcastRSS);
   const podcastJSON = '/podcast/json';
@@ -70,4 +113,15 @@
       .map(html => `<li>${html}</li>`)
       .join('');
   }
+
+  document.addEventListener('click', e => {
+    const $el = e.target;
+    const podcastID = $el.getAttribute('data-podcast-id');
+    const podcastTitle = $el.getAttribute('data-podcast-title');
+
+    if (podcastID) {
+      playPodcast({id: podcastID, title: podcastTitle});
+      e.preventDefault();
+    }
+  });
 })();
