@@ -1,268 +1,232 @@
 <template>
-    <section class="page-attorneys" itemscope itemtype="http://schema.org/AboutPage">
-        <div>
-            <h2>01</h2>
-            <h1 itemprop="headline">About</h1>
+  <section class="page-attorneys" itemscope itemtype="http://schema.org/AboutPage">
+    <headline>Attorneys</headline>
 
-            <div itemprop="mainContentOfPage">
-                <div itemscope itemtype="http://schema.org/Organization">
-                    <p itemprop="description">
-                        Bryan and Jennifer formed <span itemprop="legalName">Decker & Rubin, PC</span> in <span
-                            itemprop="foundingDate">2017</span> to focus on serving their union clients. Bryan
-                        and Jennifer were formally partners at the firm Sandulli Grace, PC.
-                        <br/>
-                        Bryan and Jennifer have both been union lawyers since they graduated from law school.
-                        They
-                        have a wealth of experience representing unions in all aspects of labor and employment
-                        law.
-                        Bryan and Jennifer rely on their over 35 years of experience as union side labor lawyers
-                        to
-                        provide top notch legal services to their clients.
-                    </p>
+    <div itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Organization">
+      <attorney
+        first-name="Bryan"
+        last-name="Decker"
+        email="bryan@deckerrubin.com"
+        phone-number="123-456-7890"
+        job-title="Partner"
+        class-name="attorney-bryan">
+        <template v-slot:description>
+          <p>
+            Bryan has represented unions and individual employees since his graduation from Northeastern University
+            School of Law in 1992. Bryan is also a graduate of Cornell University.
+          </p>
 
-                    <ul id="partners">
-                        <li itemprop="founder" itemscope itemtype="http://schema.org/Person">
-                            <h3>
-                                <span itemprop="givenName">Bryan</span> <span
-                                    itemprop="familyName">Decker</span>
-                            </h3>
+          <p>
+            Following law school, Bryan spent a year working in the legal department of the Service Employees
+            International Union in Washington, DC. Following his return to Boston in 1993, Bryan worked for private
+            law firms exclusively representing unions and individuals in employment related matters.
+          </p>
 
-                            <div>
-                                <img itemprop="image"
-                                     src="https://placeimg.com/400/400/people"
-                                     srcset="
-                                                https://placeimg.com/100/100/people 320w,
-                                                https://placeimg.com/200/200/people 480w,
-                                                https://placeimg.com/400/400/people 800w
-                                             "
-                                     sizes="
-                                                (max-width: 320px) 280px,
-                                                (max-width: 480px) 440px,
-                                                800px
-                                             "
-                                     alt="Bryan Decker"/>
+          <p>
+            Bryan has appeared on behalf of his clients in front of state and federal administrative agencies, at
+            arbitration, in contract negotiations, and in state and federal court. In addition to his union work,
+            Bryan represents individuals in all aspects of employment law, with an emphasis on discrimination and
+            wage recovery suits. Bryan puts his skills as an employment litigator to work for his union clients as
+            well, successfully pursuing group wage and other types of cases.
+          </p>
 
-                                <div itemprop="description">
-                                    <p>
-                                        Bryan has represented unions and individual employees since his
-                                        graduation
-                                        from
-                                        Northeastern University School of Law in 1992. Bryan is also a graduate
-                                        of
-                                        Cornell University.
-                                    </p>
+          <p>
+            Bryan has been a lecturer at the Labor Guild’s School of Industrial Relations, and has presented on a
+            variety of labor related topics for the Massachusetts Bar Association’s Continuing Legal Education
+            Program. He is a former member of the national AFL-CIO LCC Executive Board. He is a member of the MBA’s
+            Labor and Employment Section Council, and is a former co-chair of its Collective Bargaining practice
+            group. He is also a former member of the Steering Committee of Massachusetts Jobs with Justice and
+            former co-chair of the National Lawyer’s Guild’s Labor and Employment Committee.
+          </p>
 
-                                    <p>
-                                        Following law school, Bryan spent a year working in the legal department
-                                        of
-                                        the
-                                        Service Employees International Union in Washington, DC. Following his
-                                        return
-                                        to Boston in 1993, Bryan worked for private law firms exclusively
-                                        representing
-                                        unions and individuals in employment related matters.
-                                    </p>
+          <p>
+            Bryan lives in Newton. Bryan is a former chair of the board of the after school program at his
+            daughter’s public school. Bryan is also an avid cyclist and is a past member of the Brookline Bicycle
+            Advisory Committee.
+          </p>
+        </template>
 
-                                    <p>
-                                        Bryan has appeared on behalf of his clients in front of state and
-                                        federal
-                                        administrative agencies, at arbitration, in contract negotiations, and
-                                        in
-                                        state
-                                        and federal court. In addition to his union work, Bryan represents
-                                        individuals
-                                        in all aspects of employment law, with an emphasis on discrimination and
-                                        wage
-                                        recovery suits. Bryan puts his skills as an employment litigator to work
-                                        for
-                                        his union clients as well, successfully pursuing group wage and other
-                                        types
-                                        of
-                                        cases.
-                                    </p>
+        <template v-slot:education>
+          <ul>
+            <li>Northeastern University School of Law</li>
+            <li>Cornell University</li>
+          </ul>
+        </template>
 
-                                    <p>
-                                        Bryan has been a lecturer at the Labor Guild’s School of Industrial
-                                        Relations,
-                                        and has presented on a variety of labor related topics for the
-                                        Massachusetts
-                                        Bar
-                                        Association’s Continuing Legal Education Program. He is a former member
-                                        of
-                                        the
-                                        national AFL-CIO LCC Executive Board. He is a member of the MBA’s Labor
-                                        and
-                                        Employment Section Council, and is a former co-chair of its Collective
-                                        Bargaining practice group. He is also a former member of the Steering
-                                        Committee
-                                        of Massachusetts Jobs with Justice and former co-chair of the National
-                                        Lawyer’s
-                                        Guild’s Labor and Employment Committee.
-                                    </p>
+        <template v-slot:licenses>
+          <ul>
+            <li>Lorem ipsum sit amet</li>
+            <li>Lorem ipsum sit amet</li>
+          </ul>
+        </template>
 
-                                    <p>
-                                        Bryan lives in Newton. Bryan is a former chair of the board of the after
-                                        school
-                                        program at his daughter’s public school. Bryan is also an avid cyclist
-                                        and
-                                        is a
-                                        past member of the Brookline Bicycle Advisory Committee.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
+        <template v-slot:experience>
+          <ul>
+            <li>Lorem ipsum sit amet</li>
+            <li>Lorem ipsum sit amet</li>
+          </ul>
+        </template>
 
-                        <li itemprop="founder" itemscope itemtype="http://schema.org/Person">
-                            <h3><span itemprop="givenName">Jennifer</span> <span
-                                    itemprop="familyName">Rubin</span>
-                            </h3>
+        <template v-slot:involvement>
+          <ul>
+            <li>Lorem ipsum sit amet</li>
+            <li>Lorem ipsum sit amet</li>
+          </ul>
+        </template>
+      </attorney>
 
-                            <div>
-                                <img itemprop="image"
-                                     src="https://placeimg.com/400/400/people/2"
-                                     srcset="
-                                                https://placeimg.com/100/100/people/2 320w,
-                                                https://placeimg.com/200/200/people/2 480w,
-                                                https://placeimg.com/400/400/people/2 800w
-                                             "
-                                     sizes="
-                                                (max-width: 320px) 280px,
-                                                (max-width: 480px) 440px,
-                                                800px
-                                             "
-                                     alt="Jennifer Rubin"/>
+      <attorney
+        first-name="Jennifer"
+        last-name="Rubin"
+        email="jennifer@deckerrubin.com"
+        phone-number="123-456-7890"
+        job-title="Partner"
+        class-name="attorney-jennifer">
+        <template v-slot:description>
+          <p>
+            Jennifer Rubin has practiced labor and employment law since her graduation from the UCLA School of Law.
+            Ms. Rubin received both her B.A. and her J.D. from UCLA. She is a member of the State Bars of
+            Massachusetts, California, and Washington, D.C. She is also a member of the bars of the United States
+            Courts of Appeals for the D.C. Circuit, First Circuit, Second Circuit, Fifth Circuit, Sixth Circuit, and
+            Ninth Circuit.
+          </p>
 
-                                <div itemprop="description">
-                                    <p>
-                                        Jennifer Rubin has practiced labor and employment law since her
-                                        graduation
-                                        from the UCLA School of Law. Ms. Rubin received both her B.A. and her
-                                        J.D.
-                                        from UCLA. She is a member of the State Bars of Massachusetts,
-                                        California,
-                                        and Washington, D.C. She is also a member of the bars of the United
-                                        States
-                                        Courts of Appeals for the D.C. Circuit, First Circuit, Second Circuit,
-                                        Fifth
-                                        Circuit, Sixth Circuit, and Ninth Circuit.
-                                    </p>
+          <p>
+            Ms. Rubin is the co-author of “Employment Discrimination Law” in “Employee and Union Member Guide to
+            Labor Law: A Manual for Attorneys Representing the Labor Movement” (2008 and 2009 eds). Ms. Rubin has
+            taught seminars, participated in panels, and led discussions on labor relations and contract
+            negotiations. She also served as a judicial extern for federal District Judge Robert M. Takasugi of the
+            United States District Court for the Central District of California. In 2014, Ms. Rubin was named a
+            Massachusetts Super Lawyer Rising Star in Boston Magazine and has been listed in the Top Women Attorneys
+            in Massachusetts in Boston Magazine for 2015 and 2016.
+          </p>
 
-                                    <p>
-                                        Ms. Rubin is the co-author of “Employment Discrimination Law” in
-                                        “Employee
-                                        and
-                                        Union Member Guide to Labor Law: A Manual for Attorneys Representing the
-                                        Labor
-                                        Movement” (2008 and 2009 eds). Ms. Rubin has taught seminars,
-                                        participated
-                                        in
-                                        panels, and led discussions on labor relations and contract
-                                        negotiations.
-                                        She
-                                        also served as a judicial extern for federal District Judge Robert M.
-                                        Takasugi
-                                        of the United States District Court for the Central District of
-                                        California.
-                                        In
-                                        2014, Ms. Rubin was named a Massachusetts Super Lawyer Rising Star in
-                                        Boston
-                                        Magazine and has been listed in the Top Women Attorneys in Massachusetts
-                                        in
-                                        Boston Magazine for 2015 and 2016.
-                                    </p>
+          <p>
+            Before practicing in Massachusetts, Jennifer practiced at a firm in Washington, D.C., where she
+            represented national and local labor unions in contract negotiations, litigation, hearings, and
+            arbitrations.
+          </p>
 
-                                    <p>
-                                        Before practicing in Massachusetts, Jennifer practiced at a firm in
-                                        Washington,
-                                        D.C., where she represented national and local labor unions in contract
-                                        negotiations, litigation, hearings, and arbitrations.
-                                    </p>
+          <p>
+            In her free time, Ms. Rubin likes to write letters by hand and visit her local post office (she does
+            not have a Facebook, Twitter, or Instagram account and refuses to give up her paper planner).
+          </p>
+        </template>
 
-                                    <p>
-                                        In her free time, Ms. Rubin likes to write letters by hand and visit her
-                                        local
-                                        post office (she does not have a Facebook, Twitter, or Instagram account
-                                        and
-                                        refuses to give up her paper planner).
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        <template v-slot:education>
+          <ul>
+            <li>University of California Los Angeles</li>
+            <li>UCLA School of Law</li>
+          </ul>
+        </template>
+
+        <template v-slot:licenses>
+          <ul>
+            <li>Lorem ipsum sit amet</li>
+            <li>Lorem ipsum sit amet</li>
+          </ul>
+        </template>
+
+        <template v-slot:experience>
+          <ul>
+            <li>Lorem ipsum sit amet</li>
+            <li>Lorem ipsum sit amet</li>
+          </ul>
+        </template>
+
+        <template v-slot:involvement>
+          <ul>
+            <li>Lorem ipsum sit amet</li>
+            <li>Lorem ipsum sit amet</li>
+          </ul>
+        </template>
+      </attorney>
+    </div>
+  </section>
 </template>
 
 <script>
+  import Attorney from '../Attorney.vue';
+  import Headline from '../Headline.vue';
 
+  export default {
+    components: {
+      Attorney,
+      Headline
+    }
+  };
 </script>
 
 <style scoped>
-    .page-attorneys {
-        background-color: var(--theme-lighter-gray);
-    }
+  .page-attorneys {
+    background-color: var(--theme-white);
+    margin: 14rem 0 10rem 0;
+    padding: 0;
+  }
 
-    .page-attorneys div[itemprop='mainContentOfPage'] {
-        font-size: 1.8rem;
-        line-height: 2em;
-    }
+  div[itemprop=mainContentOfPage] {
+    margin: 0 auto;
+    max-width: var(--page-content-max-width);
+  }
+</style>
 
+<style>
+  .attorney-bryan .heading {
+    background-image: url('../../img/profile-bryan.jpg');
+  }
 
-    .page-attorneys {
-        list-style: none;
-        margin: 7.6rem 0 0 0;
-        padding: 0;
-    }
+  .attorney-bryan .heading > div {
+    left: 50%;
+  }
 
-    .page-attorneys li {
-        margin-bottom: 5rem;
-    }
+  .attorney-bryan .body {
+    grid-template-columns: auto 35rem;
+  }
 
-    .page-attorneys li > div {
-        background: var(--theme-white);
-        border: 1px solid var(--theme-light-gray);
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
-        max-height: 40rem;
-        position: relative;
-    }
+  .attorney-bryan .body div[itemprop=description] {
+    padding: 0 10rem 0 0;
+    grid-area: left;
+  }
 
-    .page-attorneys li > div > img {
-        display: block;
-    }
+  .attorney-bryan .sidebar {
+    grid-area: right;
+  }
 
-    .page-attorneys li > div:after {
-        border-bottom: 0.6rem solid var(--theme-dark-blue);
-        content: ' ';
-        display: block;
-        left: 37rem;
-        position: absolute;
-        top: 6rem;
-        width: 6rem;
-    }
+  .attorney-jennifer .heading {
+    background-image: url('../../img/profile-jennifer.jpg');
+  }
 
-    .page-attorneys li:nth-child(even) > div:after {
-        border-color: var(--theme-dark-red);
-    }
+  .attorney-jennifer .heading h2 {
+    color: var(--theme-black);
+  }
 
-    .page-attorneys li h3 {
-        color: var(--theme-dark-blue);
-        font-size: 2.6rem;
-        font-weight: normal;
-    }
+  .attorney-jennifer .heading h3 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  }
 
-    .page-attorneys li:nth-child(even) h3 {
-        color: var(--theme-dark-red);
-    }
+  .attorney-jennifer .heading h3,
+  .attorney-jennifer .heading a {
+    color: var(--theme-gray);
+  }
 
-    .page-attorneys li div[itemprop='description'] {
-        margin: 5rem 1rem 5rem 9rem;
-        max-height: 30rem;
-        overflow-y: auto;
-        padding-right: 5rem;
-    }
+  .attorney-jennifer .heading > div {
+    left: 8rem;
+  }
 
+  .attorney-jennifer .body {
+    grid-template-columns: 35rem auto;
+  }
+
+  .attorney-jennifer .body div[itemprop=description] {
+    padding: 0 0 0 10rem;
+    grid-area: right;
+  }
+
+  .attorney-jennifer .sidebar {
+    grid-area: left;
+  }
+
+  .attorney-jennifer .sidebar h4 {
+    color: var(--theme-red);
+  }
 </style>

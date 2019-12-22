@@ -1,31 +1,31 @@
 @font-face {
-    font-family: 'bentonsans';
-    src: url('../fonts/bentonsanslight-webfont.woff2') format('woff2'),
-    url('../fonts/bentonsanslight-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'bentonsans';
+  src: url('../fonts/bentonsanslight-webfont.woff2') format('woff2'),
+  url('../fonts/bentonsanslight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'bentonsans';
-    src: url('../fonts/bentonsansbook-webfont.woff2') format('woff2'),
-    url('../fonts/bentonsansbook-webfont.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
+  font-family: 'bentonsans';
+  src: url('../fonts/bentonsansbook-webfont.woff2') format('woff2'),
+  url('../fonts/bentonsansbook-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'bentonsans';
-    src: url('../fonts/bentonsansmedium-webfont.woff2') format('woff2'),
-    url('../fonts/bentonsansmedium-webfont.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
+  font-family: 'bentonsans';
+  src: url('../fonts/bentonsansmedium-webfont.woff2') format('woff2'),
+  url('../fonts/bentonsansmedium-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'bentonsans';
-    src: url('../fonts/bentonsansbold-webfont.woff2') format('woff2'),
-    url('../fonts/bentonsansbold-webfont.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'bentonsans';
+  src: url('../fonts/bentonsansbold-webfont.woff2') format('woff2'),
+  url('../fonts/bentonsansbold-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
 }
