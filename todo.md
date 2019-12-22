@@ -1,7 +1,8 @@
 - General
     - Hook up SoundCloud to correct account
     - Set up page anchors for main navigation
-    - Set up static site generator for Vue
+    - Set up static site generator for Vue/webpack
+    - Set up file extractor for webpack
 
 - Styling
     - Page transitions/animations
