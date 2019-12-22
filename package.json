@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/decker-rubin-pc/deckerrubin.com#readme",
   "devDependencies": {
+    "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",
     "css-loader": "^3.4.0",
     "file-loader": "^5.0.2",

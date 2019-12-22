@@ -84,7 +84,7 @@
     },
 
     methods: {
-      setContent: function (slug) {
+      setContent (slug) {
         slug = slug || this.$route.params.section;
         const area = this.areas.find(area => area.slug === slug);
         this.content = area ? area.content : this.areas[0].content;

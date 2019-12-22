@@ -10,7 +10,8 @@ const routes = [
   { path: '/practice-areas', text: 'Practice Areas', redirect: '/practice-areas/collective-bargaining' },
   { path: '/practice-areas/:section', component: PracticeAreas, text: 'Practice Areas' },
   { path: '/contact', component: Contact, text: 'Contact' },
-  { path: '/podcast', component: Podcast, text: 'Podcast' }
+  { path: '/podcast', component: Podcast, text: 'Podcast' },
+  { path: '/podcast/:id', component: Podcast, text: 'Podcast' }
 ];
 
 const navigation = [
@@ -21,7 +22,10 @@ const navigation = [
 ];
 
 const el = '#app';
-const router = new VueRouter({ routes });
+const router = new VueRouter({
+  mode: 'history',
+  routes
+});
 const data = { navigation };
 
 Vue.use(VueRouter);

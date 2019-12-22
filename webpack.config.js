@@ -1,6 +1,7 @@
 const path = require('path');
 const cors = require('cors');
 const fetch = require('node-fetch');
+const history = require('connect-history-api-fallback');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const podcastRSSUrl = 'http://feeds.soundcloud.com/users/soundcloud:users:12398941/sounds.rss';
 const contentBase = path.resolve(__dirname, 'dist');
@@ -37,7 +38,7 @@ module.exports = {
     before: (app, server, compiler) => {
       app.use(cors());
 
-      app.get('/podcast/rss', (req, res) => {
+      app.get('/p/rss', (req, res) => {
         //res.set('Content-Type', 'text/xml');
         res.type('application/xml');
 
@@ -46,7 +47,7 @@ module.exports = {
           .then(body => res.send(body));
       });
 
-      app.get('/podcast/json', (req, res) => {
+      app.get('/p/json', (req, res) => {
         //res.set('Content-Type', 'text/xml');
         res.type('application/json');
 
@@ -69,6 +70,8 @@ module.exports = {
           .then(response => response.text())
           .then(body => res.send(body));
       });
+
+      app.use(history());
     }
   }
 };

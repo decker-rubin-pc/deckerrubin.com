@@ -11,7 +11,9 @@
 
       <hero v-if="$route.path === '/'"/>
 
-      <router-view></router-view>
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
 
       <footer>
         <div>
