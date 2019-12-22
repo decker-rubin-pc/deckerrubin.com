@@ -5,7 +5,7 @@ self.addEventListener('install', e => e.waitUntil(
       '/',
       '/index.html',
       '/css/app.css',
-      '/js/app.js'
+      '/js/index.js'
     ]))
 ));
 
