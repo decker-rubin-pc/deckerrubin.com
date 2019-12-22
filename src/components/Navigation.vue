@@ -44,15 +44,14 @@
     color: var(--theme-gray);
     display: inline-block;
     font-size: 1.5rem;
-    font-weight: bold;
     padding: 1em 5em;
     text-decoration: none;
+    font-weight: 200;
   }
 
   .header ul li a.router-link-active,
   .header ul li a:hover {
     color: var(--theme-red);
-    font-weight: 200;
   }
 
   .footer {
