@@ -48,29 +48,31 @@
 
         <template v-slot:education>
           <ul>
-            <li>Northeastern University School of Law</li>
-            <li>Cornell University</li>
+            <li>Northeastern University School of Law, J.D.</li>
+            <li>Cornell University, B.A.</li>
           </ul>
         </template>
 
         <template v-slot:licenses>
           <ul>
-            <li>Lorem ipsum sit amet</li>
-            <li>Lorem ipsum sit amet</li>
+            <li>Massachusetts, 1992</li>
           </ul>
         </template>
 
         <template v-slot:experience>
           <ul>
-            <li>Lorem ipsum sit amet</li>
-            <li>Lorem ipsum sit amet</li>
+            <li>Service Employees International Union, Washington, DC</li>
+            <li>Angoff, Goldman, Manning, Pyle, Wanger & Hiatt, Boston, MA</li>
+            <li>Pyle, Rome & Lichten, Boston, MA</li>
+            <li>Sandulli Grace, PC, Boston, MA</li>
           </ul>
         </template>
 
         <template v-slot:involvement>
           <ul>
-            <li>Lorem ipsum sit amet</li>
-            <li>Lorem ipsum sit amet</li>
+            <li>Former Executive Board Member, National AFL-CIO, Lawyer’s Coordinating Cmte.</li>
+            <li>Former Co-Chair, National Lawyer’s Guild, Labor and Employment Cmte.</li>
+            <li>Former Co-Chair, Collective Bargaining Cmte., MBA Labor and Employment Cmte.</li>
           </ul>
         </template>
       </attorney>
@@ -115,29 +117,23 @@
 
         <template v-slot:education>
           <ul>
-            <li>University of California Los Angeles</li>
-            <li>UCLA School of Law</li>
+            <li>UCLA School of Law, J.D.</li>
+            <li>University of California, Los Angeles (UCLA), B.A.</li>
           </ul>
         </template>
 
         <template v-slot:licenses>
           <ul>
-            <li>Lorem ipsum sit amet</li>
-            <li>Lorem ipsum sit amet</li>
+            <li>Massachusetts</li>
+            <li>California</li>
+            <li>Washington, D.C.</li>
           </ul>
         </template>
 
         <template v-slot:experience>
           <ul>
-            <li>Lorem ipsum sit amet</li>
-            <li>Lorem ipsum sit amet</li>
-          </ul>
-        </template>
-
-        <template v-slot:involvement>
-          <ul>
-            <li>Lorem ipsum sit amet</li>
-            <li>Lorem ipsum sit amet</li>
+            <li>O’Donnell, Schwartz, & Anderson, PC, Washington, DC</li>
+            <li>Sandulli Grace, PC, Boston, MA</li>
           </ul>
         </template>
       </attorney>

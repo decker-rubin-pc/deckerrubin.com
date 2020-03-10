@@ -1,8 +1,10 @@
 <template>
   <section class="hero">
-    <div itemprop="alternativeHeadline">
-      <h1>Proudly serving <b>Unions</b></h1>
-      <p>and their members in both the public and private sectors.</p>
+    <div>
+      <div itemprop="alternativeHeadline">
+        <h1>Proudly serving <b>Unions</b></h1>
+        <p>and their members in both the public and private sectors.</p>
+      </div>
     </div>
   </section>
 </template>
@@ -17,7 +19,15 @@
     height: 108rem;
   }
 
-  .hero div {
+  .hero > div {
+    width: 100%;
+    height: 100%;
+    max-width: var(--page-content-max-width);
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .hero div[itemprop=alternativeHeadline] {
     position: absolute;
     right: 0;
     bottom: 21rem;

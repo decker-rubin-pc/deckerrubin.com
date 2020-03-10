@@ -10,10 +10,6 @@
     - Finish Podcast page
     - Make responsive
 
-- Needed from Bryan
-    - Get email for contact form
-    - Get sidebar information for Attorneys page
-
 - Needed from Robyn
     - Get header images for each page
     - Get alternate logo for footer

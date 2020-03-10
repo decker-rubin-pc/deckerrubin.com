@@ -1,10 +1,10 @@
 (async () => {
   // Register service worker
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('/js/sw.js')
-      .then(function () { console.log('Service Worker Registered'); });
-  }
+  // if ('serviceWorker' in navigator) {
+  //   navigator.serviceWorker
+  //     .register('/js/sw.js')
+  //     .then(function () { console.log('Service Worker Registered'); });
+  // }
 
   const $anchors = [...document.querySelectorAll('a')];
   const $validAnchors = $anchors.filter($el => $el.getAttribute('href'));

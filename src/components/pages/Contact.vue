@@ -1,84 +1,84 @@
 <template>
   <section class="page-contact" itemscope itemtype="http://schema.org/ContactPage">
-    <div>
-      <h1 itemprop="headline">Contact</h1>
+    <headline>Contact</headline>
 
-      <div itemprop="mainContentOfPage">
-        <form action="https://formspree.io/me@mikelawrence.co" method="post">
-          <fieldset>
-            <label for="full-name">Full Name</label>
-            <input id="full-name" type="text" name="name" placeholder="First and Last" required=""/>
-            <label for="email-address">Email Address</label>
-            <input id="email-address" type="email" name="_replyto" placeholder="email@domain.tld" required=""/>
-            <label for="phone">Phone</label>
-            <input id="phone" type="text" name="phone" placeholder="xxx-xxx-xxxx" required=""/>
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" name="message" placeholder="" required=""></textarea>
-            <input type="hidden" name="_subject" value="Contact Form Submission"/>
-            <input type="text" name="_gotcha" style="display:none"/>
-          </fieldset>
+    <div itemprop="mainContentOfPage">
+      <form action="https://formspree.io/bryan@deckerrubin.com" method="post">
+        <fieldset>
+          <label for="full-name">Full Name</label>
+          <input id="full-name" type="text" name="name" placeholder="First and Last" required=""/>
+          <label for="email-address">Email Address</label>
+          <input id="email-address" type="email" name="_replyto" placeholder="email@domain.tld" required=""/>
+          <label for="phone">Phone</label>
+          <input id="phone" type="text" name="phone" placeholder="xxx-xxx-xxxx" required=""/>
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" name="message" placeholder="" required=""></textarea>
+          <input type="hidden" name="_subject" value="Contact Form Submission"/>
+          <input type="text" name="_gotcha" style="display:none"/>
+        </fieldset>
 
-          <input type="submit" value="Submit"/>
-        </form>
+        <input type="submit" value="Submit"/>
+      </form>
 
-        <div itemscope itemtype="http://schema.org/Organization">
-          <address>
-            <span itemprop="legalName">Decker & Rubin, PC</span>
+      <div itemscope itemtype="http://schema.org/Organization">
+        <address>
+          <span itemprop="legalName">Decker & Rubin, PC</span>
 
-            <a href="https://goo.gl/maps/cv2MN1DCpTURex3s5"
-               itemprop="address"
-               itemscope
-               itemtype="http://schema.org/PostalAddress"
-            >
-              <span itemprop="streetAddress">295 Freeport Street</span>
-              <span itemprop="addressLocality">Boston</span>, <span
-              itemprop="addressRegion">MA</span>
-              <span itemprop="postalCode">02122</span>
-            </a>
-          </address>
+          <a href="https://goo.gl/maps/cv2MN1DCpTURex3s5"
+             itemprop="address"
+             itemscope
+             itemtype="http://schema.org/PostalAddress"
+          >
+            <span itemprop="streetAddress">295 Freeport Street</span>
+            <span itemprop="addressLocality">Boston</span>, <span
+            itemprop="addressRegion">MA</span>
+            <span itemprop="postalCode">02122</span>
+          </a>
+        </address>
 
-          <div itemprop="founder" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="givenName">Bryan</span> <span itemprop="familyName">Decker</span>
-            <span itemprop="telephone">
+        <div itemprop="founder" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="givenName">Bryan</span> <span itemprop="familyName">Decker</span>
+          <span itemprop="telephone">
                 <a href="tel:+6178771716">617.877.1716</a>
             </span>
-            <span itemprop="email">
+          <span itemprop="email">
                 <a href="mailto:bdecker@deckerrubin.com">bdecker@deckerrubin.com</a>
             </span>
-          </div>
+        </div>
 
-          <div itemprop="founder" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="givenName">Jennifer</span> <span itemprop="familyName">Rubin</span>
-            <span itemprop="telephone">
+        <div itemprop="founder" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="givenName">Jennifer</span> <span itemprop="familyName">Rubin</span>
+          <span itemprop="telephone">
                 <a href="tel:+6175159294">617.515.9294</a>
             </span>
-            <span itemprop="email">
+          <span itemprop="email">
                 <a href="mailto:jrubin@deckerrubin.com">jrubin@deckerrubin.com</a>
             </span>
-          </div>
-
-          <span>Fax:</span>
-          <a href="tel:+6179892779" itemprop="faxNumber">617.989.2779</a>
         </div>
+
+        <span>Fax:</span>
+        <a href="tel:+6179892779" itemprop="faxNumber">617.989.2779</a>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+  import Headline from '../Headline.vue';
 
+  export default {
+    components: {
+      Headline
+    }
+  };
 </script>
 
 <style scoped>
   .page-contact {
-    background-color: var(--theme-lighter-gray);
-    padding: 20rem 0 10rem 0;
+    background-color: var(--theme-white);
+    margin: 14rem 0 10rem 0;
+    padding: 0;
     text-align: center;
-  }
-
-  .page-contact > div {
-    margin: 0 auto;
-    max-width: var(--page-content-max-width);
   }
 
   .page-contact h1 {
@@ -105,6 +105,8 @@
   }
 
   .page-contact div[itemprop='mainContentOfPage'] {
+    margin: 0 auto;
+    max-width: var(--page-content-max-width);
     display: grid;
     grid-template-columns: 70% auto;
     grid-template-rows: auto;
@@ -121,7 +123,7 @@
   .page-contact form {
     border-right: 1px solid var(--theme-gray);
     margin-right: 6rem;
-    padding-right: 6rem;
+    padding: 6em 6em 0 0;
   }
 
   .page-contact form fieldset label {
@@ -162,6 +164,10 @@
 
   .page-contact form input[type='submit']:hover {
     background: var(--theme-red);
+  }
+
+  .page-contact div[itemtype='http://schema.org/Organization'] {
+    padding-top: 6em;
   }
 
   .page-contact address {
