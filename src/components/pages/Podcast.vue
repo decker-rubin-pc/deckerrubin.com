@@ -125,9 +125,10 @@
 
 <style scoped>
   .page-podcast {
-    background-color: rgb(var(--theme-white));
+    background: rgb(var(--theme-darkest-blue));
+    color: rgb(var(--theme-light-gray));
     margin: 14rem 0 10rem 0;
-    padding: 0;
+    padding: 0 0 30rem 0;
   }
 
   div[itemprop=mainContentOfPage] {

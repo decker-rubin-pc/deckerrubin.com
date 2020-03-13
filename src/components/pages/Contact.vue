@@ -30,8 +30,7 @@
              itemtype="http://schema.org/PostalAddress"
           >
             <span itemprop="streetAddress">295 Freeport Street</span>
-            <span itemprop="addressLocality">Boston</span>, <span
-            itemprop="addressRegion">MA</span>
+            <span itemprop="addressLocality">Boston</span>, <span itemprop="addressRegion">MA</span>
             <span itemprop="postalCode">02122</span>
           </a>
         </address>
@@ -39,21 +38,21 @@
         <div itemprop="founder" itemscope itemtype="http://schema.org/Person">
           <span itemprop="givenName">Bryan</span> <span itemprop="familyName">Decker</span>
           <span itemprop="telephone">
-                <a href="tel:+6178771716">617.877.1716</a>
-            </span>
+            <a href="tel:+6178771716">617.877.1716</a>
+          </span>
           <span itemprop="email">
-                <a href="mailto:bdecker@deckerrubin.com">bdecker@deckerrubin.com</a>
-            </span>
+            <a href="mailto:bdecker@deckerrubin.com">bdecker@deckerrubin.com</a>
+          </span>
         </div>
 
         <div itemprop="founder" itemscope itemtype="http://schema.org/Person">
           <span itemprop="givenName">Jennifer</span> <span itemprop="familyName">Rubin</span>
           <span itemprop="telephone">
-                <a href="tel:+6175159294">617.515.9294</a>
-            </span>
+            <a href="tel:+6175159294">617.515.9294</a>
+          </span>
           <span itemprop="email">
-                <a href="mailto:jrubin@deckerrubin.com">jrubin@deckerrubin.com</a>
-            </span>
+            <a href="mailto:jrubin@deckerrubin.com">jrubin@deckerrubin.com</a>
+          </span>
         </div>
 
         <span>Fax:</span>
@@ -75,10 +74,10 @@
 
 <style scoped>
   .page-contact {
-    background-color: rgb(var(--theme-white));
+    background: rgb(var(--theme-darkest-blue));
+    color: rgb(var(--theme-light-gray));
     margin: 14rem 0 10rem 0;
-    padding: 0;
-    text-align: center;
+    padding: 0 0 30rem 0;
   }
 
   .page-contact h1 {
@@ -96,7 +95,7 @@
   }
 
   .page-contact a {
-    color: rgb(var(--theme-dark-gray));
+    color: rgb(var(--theme-light-blue));
     text-decoration: none;
   }
 
@@ -105,8 +104,8 @@
   }
 
   .page-contact div[itemprop='mainContentOfPage'] {
-    margin: 0 auto;
     max-width: var(--page-content-max-width);
+    margin: 16rem auto 0;
     display: grid;
     grid-template-columns: 70% auto;
     grid-template-rows: auto;
@@ -176,6 +175,7 @@
   }
 
   .page-contact address a {
+    color: rgb(var(--theme-light-blue));
     display: block;
   }
 
@@ -203,12 +203,12 @@
 
   .page-contact div[itemprop='founder']:nth-child(even) span[itemprop='givenName'],
   .page-contact div[itemprop='founder']:nth-child(even) span[itemprop='familyName'] {
-    color: rgb(var(--theme-darker-blue));
+    color: rgb(var(--theme-bright-blue));
   }
 
   .page-contact div[itemprop='founder'] + span {
     display: block;
     margin-top: 2em;
-    color: rgb(var(--theme-dark-gray));
+    color: rgb(var(--theme-white));
   }
 </style>
