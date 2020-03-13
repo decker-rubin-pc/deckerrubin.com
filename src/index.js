@@ -9,8 +9,7 @@ const routes = [
   { path: '/attorneys', component: Attorneys, text: 'Attorneys' },
   { path: '/practice-areas', component: PracticeAreas, text: 'Practice Areas' },
   { path: '/contact', component: Contact, text: 'Contact' },
-  { path: '/podcast', component: Podcast, text: 'Podcast' },
-  { path: '/podcast/:id', component: Podcast, text: 'Podcast' }
+  { path: '/podcast', component: Podcast, text: 'Podcast' }
 ];
 
 const navigation = [

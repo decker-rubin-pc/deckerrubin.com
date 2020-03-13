@@ -141,7 +141,7 @@
   .sc-player {
     width: 100%;
     height: 30rem;
-    background: rgb(var(--theme-light-gray));
+    background: rgb(var(--theme-alto));
     position: relative;
   }
 

@@ -14,8 +14,8 @@
 
 <style scoped>
   .page-home {
-    margin-bottom: 0;
-    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
   }
 
   .page-home > div {
