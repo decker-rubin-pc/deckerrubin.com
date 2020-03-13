@@ -86,7 +86,7 @@
 
   .heading > div {
     max-width: 30rem;
-    background-image: url('../img/sqares.png');
+    background-image: url('../img/squares-med.svg');
     background-repeat: no-repeat;
     padding: 5rem 0 0 0;
     position: absolute;

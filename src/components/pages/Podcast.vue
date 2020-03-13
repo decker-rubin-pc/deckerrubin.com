@@ -125,7 +125,7 @@
 
 <style scoped>
   .page-podcast {
-    background-color: var(--theme-white);
+    background-color: rgb(var(--theme-white));
     margin: 14rem 0 10rem 0;
     padding: 0;
   }
@@ -153,7 +153,7 @@
   .sc-player {
     width: 100%;
     height: 30rem;
-    background: var(--theme-light-gray);
+    background: rgb(var(--theme-light-gray));
     position: relative;
   }
 
@@ -189,16 +189,16 @@
   }
 
   a {
-    color: var(--theme-gray);
+    color: rgb(var(--theme-gray));
     text-decoration: none;
     font-weight: 200;
   }
 
   a.router-link-active {
-    color: var(--theme-red);
+    color: rgb(var(--theme-red));
   }
 
   a:hover {
-    color: var(--theme-red);
+    color: rgb(var(--theme-red));
   }
 </style>

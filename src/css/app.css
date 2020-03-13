@@ -1,25 +1,30 @@
-@import "fonts.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "transitions.css";
+@import "squares.css";
 
 :root {
-  --theme-black: #000;
+  --theme-black: 0, 0, 0;
   --theme-bright-blue: 75, 180, 245;
-  --theme-light-blue: #466193;
-  --theme-blue: #006ba7;
-  --theme-dark-blue: #1a385c;
-  --theme-darker-blue: 0, 48, 106;
-  --theme-dark-gray: #4e4e4e;
-  --theme-dark-red: #94182b;
+  --theme-light-blue: 126, 153, 185;
+  --theme-blue: 0, 107, 167;
+  --theme-dark-blue: 26, 56, 92;
+  --theme-darker-blue: 1, 24, 51;
+  --theme-darkest-blue: 6, 14, 28;
+  --theme-dark-gray: 78, 78, 78;
+  --theme-darkest-gray: 2, 10, 31;
+  --theme-dark-red: 148, 24, 43;
   --theme-pink: 183, 10, 65;
-  --theme-gray: #8e8e8e;
-  --theme-light-gray: #dfdede;
-  --theme-lighter-gray: #efefef;
-  --theme-soundcloud-gray: #f5f5f5;
-  --theme-red: #f00045;
-  --theme-white: #fff;
-
+  --theme-gray: 142, 142, 142;
+  --theme-light-gray: 223, 222, 222;
+  --theme-lighter-gray: 239, 239, 239;
+  --theme-soundcloud-gray: 245, 245, 245;
+  --theme-red: 240, 0, 69;
+  --theme-white: 255, 255, 255;
   --podcast-player-height: 17rem;
   --page-content-max-width: 114rem;
+  --size-square-sm: 1.6rem;
+  --size-square-md: 2.7rem;
+  --size-square-lg: 4.8rem;
 }
 
 * {
@@ -27,50 +32,11 @@
 }
 
 html, body {
-  font-family: 'bentonsans', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-size: 10px;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-}
-
-article {
-  font-size: 1.4rem;
-  transition: margin 1s;
-}
-
-article > footer > div {
-  color: var(--theme-gray);
-  margin: 0 auto;
-  max-width: var(--page-content-max-width);
-}
-
-header {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  height: 20rem;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-header > div {
-  background: var(--theme-white);
-  border-bottom: 1px solid var(--theme-light-gray);
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.25);
-  text-align: center;
-}
-
-article > footer {
-  background: var(--theme-dark-blue);
-}
-
-article > footer > div {
-  padding: 10rem 0;
-  color: var(--theme-white);
 }
 
 /*

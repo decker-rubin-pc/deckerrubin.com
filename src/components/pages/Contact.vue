@@ -75,20 +75,20 @@
 
 <style scoped>
   .page-contact {
-    background-color: var(--theme-white);
+    background-color: rgb(var(--theme-white));
     margin: 14rem 0 10rem 0;
     padding: 0;
     text-align: center;
   }
 
   .page-contact h1 {
-    color: var(--theme-black);
+    color: rgb(var(--theme-black));
     font-size: 2.8rem;
     font-weight: normal;
     display: inline-block;
     position: relative;
     top: -5rem;
-    background-image: url('../../img/squares-sm.png');
+    background-image: url('../../img/squares-small.svg');
     background-repeat: no-repeat;
     background-position: center top;
     padding: 5rem 0 0 0;
@@ -96,7 +96,7 @@
   }
 
   .page-contact a {
-    color: var(--theme-dark-gray);
+    color: rgb(var(--theme-dark-gray));
     text-decoration: none;
   }
 
@@ -121,7 +121,7 @@
   }
 
   .page-contact form {
-    border-right: 1px solid var(--theme-gray);
+    border-right: 1px solid rgb(var(--theme-gray));
     margin-right: 6rem;
     padding: 6em 6em 0 0;
   }
@@ -135,8 +135,8 @@
 
   .page-contact form fieldset input,
   .page-contact form fieldset textarea {
-    background: var(--theme-white);
-    border: 1px solid var(--theme-light-gray);
+    background: rgb(var(--theme-white));
+    border: 1px solid rgb(var(--theme-light-gray));
     display: block;
     font-size: 1.4rem;
     margin-bottom: 1em;
@@ -147,11 +147,11 @@
 
   .page-contact form fieldset input:focus,
   .page-contact form fieldset textarea:focus {
-    border: 1px solid var(--theme-dark-gray);
+    border: 1px solid rgb(var(--theme-dark-gray));
   }
 
   .page-contact form input[type='submit'] {
-    background: var(--theme-blue);
+    background: rgb(var(--theme-blue));
     border: none;
     border-radius: 3rem;
     color: var(--theme-white);
@@ -163,7 +163,7 @@
   }
 
   .page-contact form input[type='submit']:hover {
-    background: var(--theme-red);
+    background: rgb(var(--theme-red));
   }
 
   .page-contact div[itemtype='http://schema.org/Organization'] {
@@ -209,6 +209,6 @@
   .page-contact div[itemprop='founder'] + span {
     display: block;
     margin-top: 2em;
-    color: var(--theme-dark-gray);
+    color: rgb(var(--theme-dark-gray));
   }
 </style>

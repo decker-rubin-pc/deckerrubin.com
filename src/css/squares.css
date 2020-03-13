@@ -1,0 +1,27 @@
+.squares-sm::before,
+.squares-md::before,
+.squares-lg::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  background-image: url('../img/squares.svg');
+  background-repeat: no-repeat;
+}
+
+.squares-sm::before {
+  background-size: var(--size-square-sm) var(--size-square-sm);
+  width: var(--size-square-sm);
+  height: var(--size-square-sm);
+}
+
+.squares-md::before {
+  background-size: var(--size-square-md) var(--size-square-md);
+  width: var(--size-square-md);
+  height: var(--size-square-md);
+}
+
+.squares-lg::before {
+  background-size: var(--size-square-lg) var(--size-square-lg);
+  width: var(--size-square-lg);
+  height: var(--size-square-lg);
+}

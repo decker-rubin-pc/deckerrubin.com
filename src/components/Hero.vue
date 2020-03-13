@@ -2,8 +2,10 @@
   <section class="hero">
     <div>
       <div itemprop="alternativeHeadline">
-        <h1>Proudly serving <b>Unions</b></h1>
+        <h1>Proudly serving<br/><b>Unions</b></h1>
         <p>and their members in both the public and private sectors.</p>
+        <br/>
+        <router-link to="/contact" itemprop="url">Let's Talk</router-link>
       </div>
     </div>
   </section>
@@ -13,10 +15,11 @@
   .hero {
     position: relative;
     background-image: url('../img/decker-rubin-feature-banner.jpg');
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
+    background-size: 1325px auto;
     width: 100%;
-    height: 108rem;
+    height: 85rem;
   }
 
   .hero > div {
@@ -29,29 +32,46 @@
 
   .hero div[itemprop=alternativeHeadline] {
     position: absolute;
-    right: 0;
-    bottom: 21rem;
-    background: rgba(var(--theme-darker-blue), 0.5);
-    color: var(--theme-white);
-    border-left: 1rem solid rgb(var(--theme-pink));
+    right: -5rem;
+    bottom: -10rem;
+    background: rgba(var(--theme-darker-blue), 0.9);
+    color: rgb(var(--theme-white));
     padding: 5rem;
+    width: 50rem;
+    height: 50rem;
   }
 
   .hero h1 {
-    font-size: 4.4rem;
-    font-weight: normal;
-    margin: 0;
+    font-size: 3.6rem;
+    font-weight: 100;
+    margin: 0 0 0.5em 0;
   }
 
   .hero p {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    font-weight: 100;
     display: inline-block;
-    max-width: 59%;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    margin: 0 0 2em 0;
   }
 
   .hero b {
     display: inline-block;
+    font-weight: 300;
+  }
+
+  .hero a {
+    background-color: rgb(var(--theme-pink));
+    border-radius: 2em;
+    padding: 0.5em 1em;
+    color: rgb(var(--theme-white));
+    font-size: 1.8rem;
     font-weight: 100;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .hero a:hover {
+    background-color: rgb(var(--theme-red));
   }
 </style>

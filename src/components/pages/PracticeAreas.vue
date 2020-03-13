@@ -94,7 +94,7 @@
 
 <style scoped>
   .page-practice-areas {
-    background-color: var(--theme-white);
+    background-color: rgb(var(--theme-white));
     margin: 14rem 0 10rem 0;
     padding: 0;
   }
@@ -105,7 +105,7 @@
   }
 
   div[itemprop=mainContentOfPage] > div > h2 {
-    color: var(--theme-dark-blue);
+    color: rgb(var(--theme-dark-blue));
     font-weight: 200;
   }
 

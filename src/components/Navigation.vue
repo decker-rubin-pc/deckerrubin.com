@@ -19,10 +19,10 @@
 
 <style scoped>
   .header {
-    background: var(--theme-white);
-    border-bottom: 0.5rem solid var(--theme-red);
-    border-left: 1px solid var(--theme-light-gray);
-    border-right: 1px solid var(--theme-light-gray);
+    background: rgb(var(--theme-white));
+    border-bottom: 0.5rem solid rgb(var(--theme-red));
+    border-left: 1px solid rgb(var(--theme-light-gray));
+    border-right: 1px solid rgb(var(--theme-light-gray));
     justify-self: center;
     margin-top: -1px;
   }
@@ -41,7 +41,7 @@
   }
 
   .header ul li a {
-    color: var(--theme-gray);
+    color: rgb(var(--theme-gray));
     display: inline-block;
     font-size: 1.5rem;
     padding: 1em 5em;
@@ -51,7 +51,7 @@
 
   .header ul li a.router-link-active,
   .header ul li a:hover {
-    color: var(--theme-red);
+    color: rgb(var(--theme-red));
   }
 
   .footer {
@@ -65,13 +65,14 @@
   }
 
   .footer ul li a {
-    color: var(--theme-white);
+    color: rgb(var(--theme-dark-gray));
     text-decoration: none;
     padding: 1em 3em;
+    font-weight: 500;
   }
 
   .footer ul li a.router-link-active,
   .footer ul li a:hover {
-    color: var(--theme-red);
+    color: rgb(var(--theme-red));
   }
 </style>

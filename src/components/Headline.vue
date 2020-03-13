@@ -1,12 +1,14 @@
 <template>
   <div itemprop="headline">
-    <h1><slot/></h1>
+    <h1>
+      <slot/>
+    </h1>
   </div>
 </template>
 
 <style scoped>
   div[itemprop=headline] {
-    background-color: #020a1f;
+    background-color: rgb(var(--theme-darkest-gray));
     padding: 12rem 0 8rem 0;
     text-align: center;
   }
@@ -19,8 +21,8 @@
     padding: 0 0 0 10rem;
     font-size: 4.8rem;
     font-weight: normal;
-    color: var(--theme-white);
-    background-image: url('../img/sqaures-large.png');
+    color: rgb(var(--theme-white));
+    background-image: url('../img/squares-large.svg');
     background-repeat: no-repeat;
   }
 </style>

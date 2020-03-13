@@ -155,7 +155,7 @@
 
 <style scoped>
   .page-attorneys {
-    background-color: var(--theme-white);
+    background-color: rgb(var(--theme-white));
     margin: 14rem 0 10rem 0;
     padding: 0;
   }
@@ -193,7 +193,7 @@
   }
 
   .attorney-jennifer .heading h2 {
-    color: var(--theme-black);
+    color: rgb(var(--theme-black));
   }
 
   .attorney-jennifer .heading h3 {
@@ -202,7 +202,7 @@
 
   .attorney-jennifer .heading h3,
   .attorney-jennifer .heading a {
-    color: var(--theme-gray);
+    color: rgb(var(--theme-gray));
   }
 
   .attorney-jennifer .heading > div {
@@ -223,6 +223,6 @@
   }
 
   .attorney-jennifer .sidebar h4 {
-    color: var(--theme-red);
+    color: rgb(var(--theme-red));
   }
 </style>
