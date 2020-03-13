@@ -1,6 +1,6 @@
 .page {
   background: rgb(var(--theme-blue-charcoal));
-  color: rgb(var(--theme-light-gray));
+  color: rgb(var(--theme-alto));
   margin: 14rem 0 10rem 0;
   padding: 0 0 30rem 0;
 }
