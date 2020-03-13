@@ -7,8 +7,7 @@ import './css/app.css';
 const routes = [
   { path: '/', component: Home, text: 'Home' },
   { path: '/attorneys', component: Attorneys, text: 'Attorneys' },
-  { path: '/practice-areas', text: 'Practice Areas', redirect: '/practice-areas/collective-bargaining' },
-  { path: '/practice-areas/:section', component: PracticeAreas, text: 'Practice Areas' },
+  { path: '/practice-areas', component: PracticeAreas, text: 'Practice Areas' },
   { path: '/contact', component: Contact, text: 'Contact' },
   { path: '/podcast', component: Podcast, text: 'Podcast' },
   { path: '/podcast/:id', component: Podcast, text: 'Podcast' }
@@ -16,7 +15,7 @@ const routes = [
 
 const navigation = [
   { path: '/attorneys', text: 'Attorneys' },
-  { path: '/practice-areas', text: 'Practice Areas' },
+  { path: '/practice-areas', component: PracticeAreas, text: 'Practice Areas' },
   { path: '/contact', component: Contact, text: 'Contact' },
   { path: '/podcast', component: Podcast, text: 'Podcast' }
 ];
