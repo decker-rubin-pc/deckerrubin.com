@@ -32,8 +32,6 @@
         </div>
       </footer>
     </article>
-
-    <podcast-player/>
   </div>
 </template>
 
@@ -42,7 +40,6 @@
   import Hero from './Hero.vue';
   import Logo from './Logo.vue';
   import Navigation from './Navigation.vue';
-  import PodcastPlayer from './PodcastPlayer.vue';
 
   export default {
     name: 'app',
@@ -50,8 +47,7 @@
       Copyright,
       Hero,
       Logo,
-      Navigation,
-      PodcastPlayer
+      Navigation
     },
     props: {
       navigation: Array

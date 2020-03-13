@@ -1,53 +1,64 @@
 <template>
   <div class="podcast-player">
-    <a href="#" class="podcast-player-close-button">×</a>
-    <div class="content"></div>
+    <h3>{{date}}</h3>
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
+
+    <iframe
+      itemprop="audio"
+      itemscope
+      itemtype="http://schema.org/AudioObject"
+      width="100%"
+      height="20"
+      scrolling="no"
+      frameborder="no"
+      allow="autoplay"
+      v-bind:title="title"
+      v-bind:src="src"></iframe>
+
+    <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src=""></iframe>
   </div>
 </template>
 
 <script>
-  export default {};
+  export default {
+    props: {
+      id: Number,
+      title: String,
+      date: String,
+      description: String
+    },
+    computed: {
+      src () {
+        return `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${this.id}&color=%23f00045&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&inverse=true`;
+      }
+    }
+  };
 </script>
 
 <style scoped>
   .podcast-player {
-    position: fixed;
-    bottom: calc(-1 * var(--podcast-player-height));
-    left: 0;
-    right: 0;
-    height: var(--podcast-player-height);
-    background: rgb(var(--theme-white));
-    border-top: 1px solid rgb(var(--theme-alto));
-    transition: bottom 1s;
+    margin-bottom: 10rem;
   }
 
-  .podcast-player .content {
-    margin-right: 2.5rem;
+  h2 {
+    border-bottom: 2px solid rgb(var(--theme-midnight));
+    margin: 0 0 1em 0;
+    padding: 0 0 1em 0;
+    font-size: 2rem;
+    font-weight: 100;
   }
 
-  .podcast-player-close-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    color: rgb(var(--theme-tundora));
-    font-size: 3rem;
-    font-weight: bold;
-    text-decoration: none;
-    background: rgb(var(--theme-cultured-pearl));
-    padding: 0 1rem;
-    height: var(--podcast-player-height);
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: rgb(var(--theme-blue-jeans));
+    margin: 0;
+    padding: 0.5em 0;
   }
 
-  .podcast-player-close-button:hover {
-    color: rgb(var(--theme-red-ribbon));
-  }
-
-  body.podcast-active article {
-    margin-bottom: var(--podcast-player-height);
-  }
-
-  body.podcast-active .podcast-player {
-    bottom: 0;
+  p {
+    margin: 0;
+    padding: 2em 0 4em 0;
   }
 </style>
