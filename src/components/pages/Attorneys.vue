@@ -1,5 +1,5 @@
 <template>
-  <section class="page-attorneys" itemscope itemtype="http://schema.org/AboutPage">
+  <section class="page page-attorneys" itemscope itemtype="http://schema.org/AboutPage">
     <headline>Attorneys</headline>
 
     <div itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Organization">
@@ -152,20 +152,6 @@
     }
   };
 </script>
-
-<style scoped>
-  .page-attorneys {
-    background: rgb(var(--theme-darkest-blue));
-    color: rgb(var(--theme-light-gray));
-    margin: 14rem 0 10rem 0;
-    padding: 0 0 30rem 0;
-  }
-
-  div[itemprop=mainContentOfPage] {
-    margin: 0 auto;
-    max-width: var(--page-content-max-width);
-  }
-</style>
 
 <style>
   .attorney-bryan .heading {

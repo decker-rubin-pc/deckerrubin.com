@@ -1,5 +1,5 @@
 <template>
-  <section class="page-contact" itemscope itemtype="http://schema.org/ContactPage">
+  <section class="page page-contact" itemscope itemtype="http://schema.org/ContactPage">
     <headline>Contact</headline>
 
     <div itemprop="mainContentOfPage">
@@ -73,13 +73,6 @@
 </script>
 
 <style scoped>
-  .page-contact {
-    background: rgb(var(--theme-darkest-blue));
-    color: rgb(var(--theme-light-gray));
-    margin: 14rem 0 10rem 0;
-    padding: 0 0 30rem 0;
-  }
-
   .page-contact h1 {
     color: rgb(var(--theme-black));
     font-size: 2.8rem;
@@ -104,8 +97,6 @@
   }
 
   .page-contact div[itemprop='mainContentOfPage'] {
-    max-width: var(--page-content-max-width);
-    margin: 16rem auto 0;
     display: grid;
     grid-template-columns: 70% auto;
     grid-template-rows: auto;

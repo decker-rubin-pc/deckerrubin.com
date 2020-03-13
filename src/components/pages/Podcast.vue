@@ -1,5 +1,5 @@
 <template>
-  <section class="page-podcast" itemscope itemtype="http://schema.org/WebPage">
+  <section class="page page-podcast" itemscope itemtype="http://schema.org/WebPage">
     <headline>Podcast</headline>
 
     <div itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Organization">
@@ -124,19 +124,6 @@
 </script>
 
 <style scoped>
-  .page-podcast {
-    background: rgb(var(--theme-darkest-blue));
-    color: rgb(var(--theme-light-gray));
-    margin: 14rem 0 10rem 0;
-    padding: 0 0 30rem 0;
-  }
-
-  div[itemprop=mainContentOfPage] {
-    margin: 0 auto;
-    padding: 10rem;
-    max-width: var(--page-content-max-width);
-  }
-
   div[itemprop=mainContentOfPage] p {
     font-size: 1.8rem;
     font-weight: 100;

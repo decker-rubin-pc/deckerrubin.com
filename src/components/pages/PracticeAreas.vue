@@ -1,5 +1,5 @@
 <template>
-  <section class="page-practice-areas" itemscope itemtype="http://schema.org/CollectionPage">
+  <section class="page page-practice-areas" itemscope itemtype="http://schema.org/CollectionPage">
     <headline>Practice Areas</headline>
 
     <div itemprop="mainContentOfPage">
@@ -25,18 +25,6 @@
 </script>
 
 <style scoped>
-  .page-practice-areas {
-    background: rgb(var(--theme-darkest-blue));
-    color: rgb(var(--theme-light-gray));
-    margin: 14rem 0 10rem 0;
-    padding: 0 0 30rem 0;
-  }
-
-  div[itemprop=mainContentOfPage] {
-    max-width: var(--page-content-max-width);
-    margin: 16rem auto 0;
-  }
-
   div[itemprop=mainContentOfPage] > div > h2 {
     position: relative;
     color: rgb(var(--theme-white));

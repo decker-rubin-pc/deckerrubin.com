@@ -1,5 +1,5 @@
 <template>
-  <section class="page-home" itemprop="description">
+  <section class="page page-home" itemprop="description">
     <div>
       <h1 itemprop="headline" class="squares-md">Our Advantages</h1>
       <p>
@@ -14,7 +14,8 @@
 
 <style scoped>
   .page-home {
-    background: rgb(var(--theme-darkest-blue));
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .page-home > div {

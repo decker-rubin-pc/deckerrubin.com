@@ -1,0 +1,11 @@
+.page {
+  background: rgb(var(--theme-blue-charcoal));
+  color: rgb(var(--theme-light-gray));
+  margin: 14rem 0 10rem 0;
+  padding: 0 0 30rem 0;
+}
+
+.page > div[itemprop=mainContentOfPage] {
+  max-width: var(--page-content-max-width);
+  margin: 16rem auto 0;
+}
