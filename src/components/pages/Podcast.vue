@@ -183,10 +183,10 @@
   }
 
   a.router-link-active {
-    color: rgb(var(--theme-red));
+    color: rgb(var(--theme-red-ribbon));
   }
 
   a:hover {
-    color: rgb(var(--theme-red));
+    color: rgb(var(--theme-red-ribbon));
   }
 </style>

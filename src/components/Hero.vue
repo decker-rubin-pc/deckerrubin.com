@@ -34,7 +34,7 @@
     position: absolute;
     right: -5rem;
     bottom: -10rem;
-    background: rgba(var(--theme-darker-blue), 0.9);
+    background: rgba(var(--theme-midnight), 0.9);
     color: rgb(var(--theme-white));
     padding: 5rem;
     width: 50rem;
@@ -61,7 +61,7 @@
   }
 
   .hero a {
-    background-color: rgb(var(--theme-pink));
+    background-color: rgb(var(--theme-shiraz));
     border-radius: 2em;
     padding: 0.5em 1em;
     color: rgb(var(--theme-white));
@@ -72,6 +72,6 @@
   }
 
   .hero a:hover {
-    background-color: rgb(var(--theme-red));
+    background-color: rgb(var(--theme-red-ribbon));
   }
 </style>

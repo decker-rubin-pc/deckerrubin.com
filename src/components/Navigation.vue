@@ -20,9 +20,9 @@
 <style scoped>
   .header {
     background: rgb(var(--theme-white));
-    border-bottom: 0.5rem solid rgb(var(--theme-red));
-    border-left: 1px solid rgb(var(--theme-light-gray));
-    border-right: 1px solid rgb(var(--theme-light-gray));
+    border-bottom: 0.5rem solid rgb(var(--theme-red-ribbon));
+    border-left: 1px solid rgb(var(--theme-alto));
+    border-right: 1px solid rgb(var(--theme-alto));
     justify-self: center;
     margin-top: -1px;
   }
@@ -51,7 +51,7 @@
 
   .header ul li a.router-link-active,
   .header ul li a:hover {
-    color: rgb(var(--theme-red));
+    color: rgb(var(--theme-red-ribbon));
   }
 
   .footer {
@@ -65,7 +65,7 @@
   }
 
   .footer ul li a {
-    color: rgb(var(--theme-dark-gray));
+    color: rgb(var(--theme-tundora));
     text-decoration: none;
     padding: 1em 3em;
     font-weight: 500;
@@ -73,6 +73,6 @@
 
   .footer ul li a.router-link-active,
   .footer ul li a:hover {
-    color: rgb(var(--theme-red));
+    color: rgb(var(--theme-red-ribbon));
   }
 </style>

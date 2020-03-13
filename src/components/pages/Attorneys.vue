@@ -210,6 +210,6 @@
   }
 
   .attorney-jennifer .sidebar h4 {
-    color: rgb(var(--theme-red));
+    color: rgb(var(--theme-red-ribbon));
   }
 </style>

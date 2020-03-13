@@ -1,0 +1,21 @@
+:root {
+  --theme-black: 0, 0, 0;
+  --theme-white: 255, 255, 255;
+  --theme-midnight: 4, 26, 53;
+  --theme-big-stone: 16, 36, 59;
+  --theme-cab-sav: 81, 13, 30;
+  --theme-gunmetal: 0, 7, 22;
+  --theme-blue-charcoal: 6, 14, 28;
+  --theme-blue-jeans: 75, 180, 245;
+  --theme-ship-cove: 126, 153, 185;
+  --theme-allports: 0, 107, 167;
+  --theme-tundora: 78, 78, 78;
+  --theme-shiraz: 183, 10, 65;
+  --theme-gray: 142, 142, 142;
+  --theme-alto: 223, 222, 222;
+  --theme-cultured-pearl: 245, 245, 245;
+  --theme-red-ribbon: 240, 0, 69;
+
+  --podcast-player-height: 17rem;
+  --page-content-max-width: 114rem;
+}

@@ -88,12 +88,12 @@
   }
 
   .page-contact a {
-    color: rgb(var(--theme-light-blue));
+    color: rgb(var(--theme-ship-cove));
     text-decoration: none;
   }
 
   .page-contact a:hover {
-    color: var(--theme-red);
+    color: var(--theme-red-ribbon);
   }
 
   .page-contact div[itemprop='mainContentOfPage'] {
@@ -126,7 +126,7 @@
   .page-contact form fieldset input,
   .page-contact form fieldset textarea {
     background: rgb(var(--theme-white));
-    border: 1px solid rgb(var(--theme-light-gray));
+    border: 1px solid rgb(var(--theme-alto));
     display: block;
     font-size: 1.4rem;
     margin-bottom: 1em;
@@ -137,11 +137,11 @@
 
   .page-contact form fieldset input:focus,
   .page-contact form fieldset textarea:focus {
-    border: 1px solid rgb(var(--theme-dark-gray));
+    border: 1px solid rgb(var(--theme-tundora));
   }
 
   .page-contact form input[type='submit'] {
-    background: rgb(var(--theme-blue));
+    background: rgb(var(--theme-allports));
     border: none;
     border-radius: 3rem;
     color: var(--theme-white);
@@ -153,7 +153,7 @@
   }
 
   .page-contact form input[type='submit']:hover {
-    background: rgb(var(--theme-red));
+    background: rgb(var(--theme-red-ribbon));
   }
 
   .page-contact div[itemtype='http://schema.org/Organization'] {
@@ -161,12 +161,12 @@
   }
 
   .page-contact address {
-    color: var(--theme-dark-gray);
+    color: rgb(var(--theme-tundora));
     font-style: normal;
   }
 
   .page-contact address a {
-    color: rgb(var(--theme-light-blue));
+    color: rgb(var(--theme-ship-cove));
     display: block;
   }
 
@@ -189,12 +189,12 @@
   .page-contact div[itemprop='founder'] span[itemprop='givenName'],
   .page-contact div[itemprop='founder'] span[itemprop='familyName'] {
     font-weight: bold;
-    color: rgb(var(--theme-pink));
+    color: rgb(var(--theme-shiraz));
   }
 
   .page-contact div[itemprop='founder']:nth-child(even) span[itemprop='givenName'],
   .page-contact div[itemprop='founder']:nth-child(even) span[itemprop='familyName'] {
-    color: rgb(var(--theme-bright-blue));
+    color: rgb(var(--theme-blue-jeans));
   }
 
   .page-contact div[itemprop='founder'] + span {

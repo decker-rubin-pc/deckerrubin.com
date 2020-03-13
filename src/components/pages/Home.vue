@@ -43,7 +43,7 @@
   }
 
   .page-home p {
-    color: rgb(var(--theme-light-blue));
+    color: rgb(var(--theme-ship-cove));
     font-size: 1.6rem;
     line-height: 2em;
     margin: 0;
