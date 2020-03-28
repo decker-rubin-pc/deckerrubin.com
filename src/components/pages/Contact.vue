@@ -74,15 +74,11 @@
 
 <style scoped>
   .page-contact h1 {
-    color: rgb(var(--theme-black));
     font-size: 2.8rem;
     font-weight: normal;
     display: inline-block;
     position: relative;
     top: -5rem;
-    background-image: url('../../img/squares-small.svg');
-    background-repeat: no-repeat;
-    background-position: center top;
     padding: 5rem 0 0 0;
     margin: 10rem 0 5rem 0;
   }

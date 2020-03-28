@@ -3,45 +3,46 @@
     <div class="heading">
       <div>
         <h2>
-          <span itemprop="givenName">{{firstName}}</span>&nbsp;
+          <span itemprop="givenName">{{firstName}}</span>
           <span itemprop="familyName">{{lastName}}</span>
         </h2>
 
         <h3 itemprop="jobTitle">{{jobTitle}}</h3>
 
-        <span itemprop="telephone">
-          <a v-bind:href="phoneNumberLink">{{phoneNumber}}</a>
-        </span>
-
         <span itemprop="email">
           <a v-bind:href="emailLink">{{email}}</a>
         </span>
+
+        <span itemprop="telephone">
+          <a v-bind:href="phoneNumberLink">{{phoneNumber}}</a>
+        </span>
       </div>
     </div>
 
-    <div class="body">
-      <div itemprop="description">
-        <slot name="description"/>
+    <div class="body" itemprop="description">
+      <slot name="description"/>
+    </div>
+
+    <div class="sidebar">
+      <div>
+        <h4>Education</h4>
+        <slot name="education"/>
       </div>
-      <div class="sidebar">
-        <div>
-          <h4>Education</h4>
-          <slot name="education"/>
-        </div>
-        <div>
-          <h4>Licenses, Certifications &amp; Bar Admissions</h4>
-          <slot name="licenses"/>
-        </div>
-        <div>
-          <h4>Professional Experience</h4>
-          <slot name="experience"/>
-        </div>
-        <div>
-          <h4>Professional &amp; Community Involvement</h4>
-          <slot name="involvement"/>
-        </div>
+      <div>
+        <h4>Licenses, Certifications & Bar Admissions</h4>
+        <slot name="licenses"/>
+      </div>
+      <div>
+        <h4>Professional Experience</h4>
+        <slot name="experience"/>
+      </div>
+      <div>
+        <h4>Professional &amp; Community Involvement</h4>
+        <slot name="involvement"/>
       </div>
     </div>
+
+    <div class="squares-lg"></div>
   </div>
 </template>
 
@@ -68,79 +69,75 @@
 </script>
 
 <style scoped>
-  .heading {
-    /*
-     @todo Rework this so that the image and the background color are separated.
-     @todo Also, make the background color full width.
-     */
-    height: 57rem;
-    background-repeat: no-repeat;
-    background-size: contain;
+  .attorney {
     position: relative;
+    display: grid;
+    grid-template-columns: 72rem auto;
+    grid-template-rows: 52rem auto;
+    grid-template-areas: "heading squares" "body sidebar";
+    color: rgb(var(--theme-alto));
+    margin: 0 0 8rem 0;
   }
 
-  .heading > div,
-  .heading a {
-    color: var(--theme-white);
-  }
-
-  .heading > div {
-    max-width: 30rem;
-    background-image: url('../img/squares-med.svg');
+  .heading {
+    grid-area: heading;
+    color: rgb(var(--theme-gunmetal));
     background-repeat: no-repeat;
-    padding: 5rem 0 0 0;
-    position: absolute;
-    top: 10rem;
+    background-size: cover;
+    padding: 5rem 8rem;
   }
 
-  .heading h2 {
-    font-size: 4.4rem;
-    font-weight: normal;
+  .heading h2,
+  .heading h3 {
     margin: 0;
     padding: 0;
+    font-weight: 500;
   }
 
   .heading h3 {
-    font-size: 2.4rem;
-    font-weight: normal;
-    font-style: italic;
     text-transform: lowercase;
-    margin: 0 0 4rem 0;
-    padding: 0 0 4rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 0 0 2em 0;
   }
 
   .heading a {
+    color: rgb(var(--theme-big-stone));
+    display: block;
+    margin: 0 0 1em 0;
     text-decoration: none;
-    line-height: 1.5em;
   }
 
   .heading a:hover {
-    font-weight: 200;
+    color: rgb(var(--theme-cocoa-bean));
   }
 
-  .heading span[itemprop="telephone"],
-  .heading span[itemprop="email"] {
-    display: block;
+  .squares-lg {
+    grid-area: squares;
+    position: absolute;
+    left: -1.5rem;
+    bottom: -2rem;
   }
 
   .body {
+    grid-area: body;
+    padding: 7rem 8rem;
     font-size: 1.6rem;
-    padding: 8rem 8rem 10rem 8rem;
-    background: var(--theme-white);
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-areas: "left right";
-    position: relative;
-    top: -10rem;
-    color: #474747;
     line-height: 1.5em;
     font-weight: 100;
   }
 
+  .body p {
+    margin: 0 0 2em 0;
+    padding: 0;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    padding: 4rem 5rem;
+    background: rgb(var(--theme-gunmetal));
+  }
+
   .sidebar h4 {
-    font-weight: 300;
-    color: #213e6e;
+    font-weight: 500;
     text-transform: uppercase;
     font-size: 1.4rem;
     margin: 0;
@@ -156,8 +153,8 @@
 
   .sidebar ul li {
     line-height: 2em;
-    color: #474747;
     font-size: 1.5rem;
     font-weight: 100;
+    margin: 0 0 1em 0;
   }
 </style>

@@ -2,7 +2,8 @@
   --theme-black: 0, 0, 0;
   --theme-white: 255, 255, 255;
   --theme-midnight: 4, 26, 53;
-  --theme-big-stone: 16, 36, 59;
+  --theme-black-pearl: 10, 16, 36;
+  --theme-big-stone: 22, 35, 58;
   --theme-cab-sav: 81, 13, 30;
   --theme-gunmetal: 0, 7, 22;
   --theme-blue-charcoal: 6, 14, 28;
@@ -15,6 +16,7 @@
   --theme-alto: 223, 222, 222;
   --theme-cultured-pearl: 245, 245, 245;
   --theme-red-ribbon: 240, 0, 69;
+  --theme-cocoa-bean: 73, 21, 31;
 
   --podcast-player-height: 17rem;
   --page-content-max-width: 114rem;

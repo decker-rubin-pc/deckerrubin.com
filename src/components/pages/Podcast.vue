@@ -14,6 +14,7 @@
 
       <podcast-player
         v-for="item in items"
+        v-bind:key="item.id"
         v-bind:id="item.id"
         v-bind:title="item.title"
         v-bind:date="new Date(item.created_at).toLocaleDateString().replace(/\//gim, '.')"

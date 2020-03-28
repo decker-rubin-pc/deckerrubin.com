@@ -154,62 +154,54 @@
 </script>
 
 <style>
+  .page-attorneys [itemprop="mainContentOfPage"] {
+    border-top: 1px solid rgb(var(--theme-big-stone));
+    padding: 8rem 0 0 0;
+  }
+
   .attorney-bryan .heading {
     background-image: url('../../img/profile-bryan.jpg');
   }
 
-  .attorney-bryan .heading > div {
-    left: 50%;
-  }
-
   .attorney-bryan .body {
-    grid-template-columns: auto 35rem;
+    background: rgb(var(--theme-big-stone));
   }
 
-  .attorney-bryan .body div[itemprop=description] {
-    padding: 0 10rem 0 0;
-    grid-area: left;
+  .attorney-bryan .heading > div {
+    float: right;
   }
 
-  .attorney-bryan .sidebar {
-    grid-area: right;
+  .attorney-bryan .sidebar h4 {
+    color: rgb(var(--theme-big-stone));
+  }
+
+  .attorney.attorney-jennifer {
+    grid-template-columns: auto 72rem;
+    grid-template-rows: 52rem auto;
+    grid-template-areas: "squares heading" "sidebar body";
   }
 
   .attorney-jennifer .heading {
     background-image: url('../../img/profile-jennifer.jpg');
   }
 
-  .attorney-jennifer .heading h2 {
-    color: rgb(var(--theme-black));
+  .attorney-jennifer .squares-lg {
+    grid-area: squares;
+    position: absolute;
+    left: auto;
+    right: -1.5rem;
+    bottom: -2rem;
   }
 
-  .attorney-jennifer .heading h3 {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  }
-
-  .attorney-jennifer .heading h3,
-  .attorney-jennifer .heading a {
-    color: rgb(var(--theme-gray));
-  }
-
-  .attorney-jennifer .heading > div {
-    left: 8rem;
+  .attorney-jennifer .squares-lg::before {
+    transform: scaleX(-1);
   }
 
   .attorney-jennifer .body {
-    grid-template-columns: 35rem auto;
-  }
-
-  .attorney-jennifer .body div[itemprop=description] {
-    padding: 0 0 0 10rem;
-    grid-area: right;
-  }
-
-  .attorney-jennifer .sidebar {
-    grid-area: left;
+    background: rgb(var(--theme-cocoa-bean));
   }
 
   .attorney-jennifer .sidebar h4 {
-    color: rgb(var(--theme-red-ribbon));
+    color: rgb(var(--theme-cocoa-bean));
   }
 </style>
