@@ -9,3 +9,11 @@
 /*.fade-leave-active {*/
 /*  opacity: 0*/
 /*}*/
+
+a,
+input,
+textarea {
+  transition: color 0.5s,
+              background-color 0.5s,
+              border-color 0.5s;
+}

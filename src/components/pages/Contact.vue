@@ -89,7 +89,7 @@
   }
 
   .page-contact a:hover {
-    color: var(--theme-red-ribbon);
+    color: rgb(var(--theme-alto));
   }
 
   .page-contact div[itemprop='mainContentOfPage'] {
@@ -122,7 +122,7 @@
   .page-contact form fieldset input,
   .page-contact form fieldset textarea {
     background: rgb(var(--theme-white));
-    border: 1px solid rgb(var(--theme-alto));
+    border: 2px solid rgb(var(--theme-alto));
     display: block;
     font-size: 1.4rem;
     margin-bottom: 1em;
@@ -133,14 +133,14 @@
 
   .page-contact form fieldset input:focus,
   .page-contact form fieldset textarea:focus {
-    border: 1px solid rgb(var(--theme-tundora));
+    border: 2px solid rgb(var(--theme-blue-jeans));
   }
 
   .page-contact form input[type='submit'] {
     background: rgb(var(--theme-allports));
     border: none;
     border-radius: 3rem;
-    color: var(--theme-white);
+    color: var(--theme-alto);
     font-size: 1.5rem;
     text-transform: uppercase;
     margin-top: 2em;
