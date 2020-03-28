@@ -18,20 +18,18 @@
       </div>
 
       <footer>
-        <div>
-          <logo is-small/>
+        <logo is-small/>
 
-          <navigation v-bind:items="navigation" is-footer/>
+        <navigation v-bind:items="navigation" is-footer/>
 
-          <p>
-            The material presented on this site is included with the understanding and agreement that Decker &amp;amp;
-            Rubin, PC is not engaged in rendering legal or other professional services by posting said material. The
-            services of a competent professional should be sought if legal or other specific expert assistance is
-            required.
-          </p>
+        <p class="body">
+          The material presented on this site is included with the understanding and agreement that Decker &amp;
+          Rubin, PC is not engaged in rendering legal or other professional services by posting said material. The
+          services of a competent professional should be sought if legal or other specific expert assistance is
+          required.
+        </p>
 
-          <copyright/>
-        </div>
+        <copyright/>
       </footer>
     </article>
   </div>
@@ -81,18 +79,36 @@
     text-align: center;
   }
 
-  article > footer {
-    background: rgb(var(--theme-white));
+  .view {
+    background: rgb(var(--theme-blue-charcoal));
   }
 
-  article > footer > div {
+  article > footer {
+    background: rgb(var(--theme-white));
     color: rgb(var(--theme-gray));
     margin: 0 auto;
     max-width: var(--page-content-max-width);
-    padding: 10rem 0;
+    padding: 10rem 1rem;
+
+    display: grid;
+    grid-template-columns: 18rem auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "logo navigation" "body body" "copyright copyright";
   }
 
-  .view {
-    background: rgb(var(--theme-blue-charcoal));
+  article > footer > a {
+    grid-area: logo;
+  }
+
+  article > footer > nav {
+    grid-area: navigation;
+  }
+
+  article > footer > .body {
+    grid-area: body;
+  }
+
+  article > footer > .copyright {
+    grid-area: copyright;
   }
 </style>

@@ -55,7 +55,7 @@
   }
 
   .footer {
-    margin: 0 0 4rem 10rem;
+    margin: 0 0 4rem 0;
   }
 
   .footer ul {
@@ -69,6 +69,7 @@
     text-decoration: none;
     padding: 1em 3em;
     font-weight: 500;
+    line-height: 2.6rem;
   }
 
   .footer ul li a.router-link-active,
