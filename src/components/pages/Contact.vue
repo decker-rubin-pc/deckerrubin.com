@@ -150,9 +150,10 @@
 
   .page-contact form input[type='submit']:hover {
     background: rgb(var(--theme-red-ribbon));
+    cursor: pointer;
   }
 
-  .page-contact div[itemtype='http://schema.org/Organization'] {
+  .page-contact [itemtype='http://schema.org/Organization'] {
     padding-top: 6em;
   }
 
@@ -166,36 +167,41 @@
     display: block;
   }
 
-  .page-contact address span[itemprop='legalName'] {
+  .page-contact address [itemprop='legalName'] {
     font-weight: bold;
+    margin: 0 0 0.5em 0;
+    display: block;
   }
 
-  .page-contact address span[itemprop='addressLocality']:before,
-  .page-contact div[itemprop='founder'] span[itemprop='telephone']:before,
-  .page-contact div[itemprop='founder'] span[itemprop='email']:before,
-  .page-contact div[itemprop='founder'] + span:before {
+  .page-contact [itemprop='founder'] [itemprop='telephone'],
+  .page-contact [itemprop='founder'] [itemprop='email'] {
+    display: block;
+    margin: 0.5em 0 0 0;
+  }
+
+  .page-contact address [itemprop='addressLocality']:before {
     content: '\A';
     white-space: pre;
   }
 
-  .page-contact div[itemprop='founder'] {
+  .page-contact [itemprop='founder'] {
     margin-top: 3.5rem;
   }
 
-  .page-contact div[itemprop='founder'] span[itemprop='givenName'],
-  .page-contact div[itemprop='founder'] span[itemprop='familyName'] {
+  .page-contact [itemprop='founder'] [itemprop='givenName'],
+  .page-contact [itemprop='founder'] [itemprop='familyName'] {
     font-weight: bold;
     color: rgb(var(--theme-shiraz));
   }
 
-  .page-contact div[itemprop='founder']:nth-child(even) span[itemprop='givenName'],
-  .page-contact div[itemprop='founder']:nth-child(even) span[itemprop='familyName'] {
+  .page-contact [itemprop='founder']:nth-child(even) [itemprop='givenName'],
+  .page-contact [itemprop='founder']:nth-child(even) [itemprop='familyName'] {
     color: rgb(var(--theme-blue-jeans));
   }
 
-  .page-contact div[itemprop='founder'] + span {
+  .page-contact [itemprop='founder'] + span {
     display: block;
-    margin-top: 2em;
+    margin: 2em 0 0.5em 0;
     color: rgb(var(--theme-white));
   }
 </style>
