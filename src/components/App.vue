@@ -11,9 +11,11 @@
 
       <hero v-if="$route.path === '/'"/>
 
-      <transition name="fade">
-        <router-view></router-view>
-      </transition>
+      <div class="view">
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      </div>
 
       <footer>
         <div>
@@ -58,7 +60,6 @@
 <style scoped>
   article {
     font-size: 1.4rem;
-    transition: margin 1s;
   }
 
   header {
@@ -80,6 +81,10 @@
     text-align: center;
   }
 
+  article > footer {
+    background: rgb(var(--theme-white));
+  }
+
   article > footer > div {
     color: rgb(var(--theme-gray));
     margin: 0 auto;
@@ -87,7 +92,7 @@
     padding: 10rem 0;
   }
 
-  article > footer {
-    background: rgb(var(--theme-white));
+  .view {
+    background: rgb(var(--theme-blue-charcoal));
   }
 </style>

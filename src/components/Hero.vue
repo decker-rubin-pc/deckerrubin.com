@@ -1,19 +1,20 @@
 <template>
-  <section class="hero">
-    <div>
-      <div itemprop="alternativeHeadline">
-        <h1>Proudly serving<br/><b>Unions</b></h1>
-        <p>and their members in both the public and private sectors.</p>
-        <br/>
-        <router-link to="/contact" itemprop="url">Let's Talk</router-link>
+    <section class="hero">
+      <div>
+        <div itemprop="alternativeHeadline">
+          <h1>Proudly serving<br/><b>Unions</b></h1>
+          <p>and their members in both the public and private sectors.</p>
+          <br/>
+          <router-link to="/contact" itemprop="url">Let's Talk</router-link>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 </template>
 
 <style scoped>
   .hero {
     position: relative;
+    background-color: rgb(var(--theme-white));
     background-image: url('../img/decker-rubin-feature-banner.jpg');
     background-position: top center;
     background-repeat: no-repeat;
