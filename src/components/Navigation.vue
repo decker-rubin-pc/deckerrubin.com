@@ -46,7 +46,7 @@
     font-size: 1.5rem;
     padding: 1em 5em;
     text-decoration: none;
-    font-weight: 200;
+    font-weight: 400;
   }
 
   .header ul li a.router-link-active,
