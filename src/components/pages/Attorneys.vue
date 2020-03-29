@@ -172,7 +172,7 @@
   }
 
   .attorney-bryan .sidebar h4 {
-    color: rgb(var(--theme-big-stone));
+    color: rgb(var(--theme-st-tropaz));
   }
 
   .attorney.attorney-jennifer {
@@ -202,6 +202,21 @@
   }
 
   .attorney-jennifer .sidebar h4 {
-    color: rgb(var(--theme-cocoa-bean));
+    color: rgb(var(--theme-cannon-pink));
+  }
+
+  @media (max-width: 899px) {
+    .page-attorneys [itemprop="mainContentOfPage"] {
+      border: none;
+      padding: 0;
+    }
+
+    .attorney.attorney-jennifer {
+      grid-template-columns: auto;
+      grid-template-rows: 70rem auto auto;
+      grid-template-areas: "heading" "body" "sidebar";
+      color: rgb(var(--theme-alto));
+      margin: 0 0 8rem 0;
+    }
   }
 </style>

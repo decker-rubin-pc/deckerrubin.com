@@ -157,4 +157,30 @@
     font-weight: 100;
     margin: 0 0 1em 0;
   }
+
+  @media (max-width: 899px) {
+    .squares-lg {
+      display: none;
+    }
+
+    .attorney {
+      grid-template-columns: auto;
+      grid-template-rows: 70rem auto auto;
+      grid-template-areas: "heading" "body" "sidebar";
+      color: rgb(var(--theme-alto));
+      margin: 0 0 8rem 0;
+    }
+
+    .heading h2 {
+      font-size: 3.6rem;
+    }
+
+    .heading h3,
+    .heading a,
+    .body,
+    .sidebar h4,
+    .sidebar ul li {
+      font-size: 2.4rem;
+    }
+  }
 </style>
