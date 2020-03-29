@@ -1,6 +1,7 @@
 <template>
   <router-link
     to="/"
+    @click.native="onClick"
     v-bind:class="{small: isSmall, large: !isSmall}"
     itemprop="image"
     aria-label="Decker-Rubin Logo"
@@ -11,6 +12,11 @@
   export default {
     props: {
       isSmall: Boolean
+    },
+    methods: {
+      onClick: function () {
+        window.scrollTo(0, 0);
+      }
     }
   };
 </script>

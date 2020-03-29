@@ -38,6 +38,7 @@
       },
       onMenuClick: function () {
         this.isExpanded = false;
+        window.scrollTo(0, 0);
       }
     }
   };
