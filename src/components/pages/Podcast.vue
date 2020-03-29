@@ -57,7 +57,6 @@
         const response = await fetch(podcastPath);
         const { collection = [] } = await response.json();
         _cache = collection.filter(item => item.public);
-        console.log(_cache);
         return _cache;
       }
     }
