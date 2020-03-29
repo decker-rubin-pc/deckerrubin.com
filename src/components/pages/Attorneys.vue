@@ -220,5 +220,15 @@
       color: rgb(var(--theme-alto));
       margin: 0 0 8rem 0;
     }
+
+    .attorney.attorney-jennifer .heading {
+      justify-items: start;
+    }
+  }
+
+  @media (max-width: 499px) {
+    .attorney.attorney-jennifer .heading {
+      background-position: -45rem 0;
+    }
   }
 </style>

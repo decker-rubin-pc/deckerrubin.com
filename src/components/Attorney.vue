@@ -192,6 +192,7 @@
       grid-template-areas: 'name' 'title' '.' 'contact';
       align-items: end;
       justify-content: end;
+      justify-items: end;
     }
 
     .contact {
@@ -227,6 +228,12 @@
     .sidebar h4,
     .sidebar ul li {
       font-size: 2.4rem;
+    }
+  }
+
+  @media (max-width: 499px) {
+    .heading {
+      background-position: -26rem 0;
     }
   }
 </style>
