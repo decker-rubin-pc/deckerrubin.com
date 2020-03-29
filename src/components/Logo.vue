@@ -42,5 +42,10 @@
       height: 4rem;
       width: 24.5rem;
     }
+
+    .large {
+      height: 6rem;
+      width: 36.75rem;
+    }
   }
 </style>

@@ -9,3 +9,9 @@
   max-width: var(--page-content-max-width);
   margin: 16rem auto 0;
 }
+
+@media (max-width: 899px) {
+  .page {
+    padding: 2rem 2rem 30rem 2rem;
+  }
+}
