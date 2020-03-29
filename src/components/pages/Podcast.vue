@@ -32,7 +32,8 @@
   import Headline from '../Headline.vue';
   import PodcastPlayer from '../PodcastPlayer.vue';
 
-  const podcastPath = '/p/json';
+  // const podcastPath = '/p/json';
+  const podcastPath = 'https://dr-proxy.herokuapp.com/p/json';
   let _cache;
 
   export default {
