@@ -4,7 +4,8 @@
 
     <div itemprop="mainContentOfPage">
       <div v-for="area in areas">
-        <h2 class="squares-sm">{{area.title}}</h2>
+        <div class="squares-sm"></div>
+        <h2>{{area.title}}</h2>
         <p>{{area.content}}</p>
       </div>
     </div>
@@ -25,6 +26,10 @@
 </script>
 
 <style scoped>
+  [itemprop="mainContentOfPage"] > div {
+    position: relative;
+  }
+
   h2 {
     position: relative;
     color: rgb(var(--theme-white));
@@ -34,17 +39,17 @@
     margin: 0;
   }
 
-  h2::before {
-    position: absolute;
-    left: calc(var(--size-square-sm) * -2);
-    top: calc(var(--size-square-sm) * -1);
-  }
-
   p {
     font-size: 1.6rem;
     line-height: 1.75em;
     padding: 2em 0 8em 0;
     margin: 0;
+  }
+
+  .squares-sm {
+    position: absolute;
+    left: calc(var(--size-square-sm) * -1);
+    top: calc(var(--size-square-sm) * -0.5);
   }
 
   @media (max-width: 899px) {
@@ -62,13 +67,16 @@
       border: none;
       padding: 0;
       display: inline-block;
-      margin-top: calc(var(--size-square-sm) * 4);
     }
 
-    h2::before {
+    .squares-sm {
+      margin-bottom: 2rem;
       position: relative;
-      left: 50%;
-      top: calc(var(--size-square-sm) * -4);
+      left: auto;
+      top: auto;
+    }
+
+    .squares-sm::before {
       background-size: var(--size-square-md) var(--size-square-md);
       width: var(--size-square-md);
       height: var(--size-square-md);
