@@ -65,7 +65,7 @@
   @media (max-width: 899px) {
     footer {
       display: block;
-      padding: 14rem 3.5rem;
+      padding: 2rem 3.5rem;
     }
 
     footer .body {

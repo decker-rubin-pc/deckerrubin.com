@@ -12,6 +12,7 @@
 
 @media (max-width: 899px) {
   .page {
-    padding: 2rem 2rem 30rem 2rem;
+    padding: 2rem 2rem 10rem 2rem;
+    margin: 14rem 0 6rem 0;
   }
 }
