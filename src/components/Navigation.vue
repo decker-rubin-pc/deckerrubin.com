@@ -1,8 +1,10 @@
 <template>
-  <nav v-bind:class="{footer: isFooter, header: !isFooter}">
+  <nav v-bind:class="classObject">
+    <a class="hamburger" href="#" v-on:click="onHamburgerClick"></a>
+
     <ul itemtype="https://schema.org/SiteNavigationElement" role="menu">
       <li v-for="{path, text} in items" itemprop="name" role="menuitem">
-        <router-link v-bind:to="{path}" itemprop="url">{{text}}</router-link>
+        <router-link v-bind:to="{path}" itemprop="url" @click.native="onMenuClick">{{text}}</router-link>
       </li>
     </ul>
   </nav>
@@ -13,11 +15,39 @@
     props: {
       items: Array,
       isFooter: Boolean
+    },
+    data: function () {
+      return { isExpanded: false };
+    },
+    computed: {
+      classObject: function () {
+        return {
+          footer: this.isFooter,
+          header: !this.isFooter,
+          isExpanded: this.isExpanded
+        };
+      }
+    },
+    methods: {
+      onHamburgerClick: function (e) {
+        e.preventDefault();
+
+        this.isExpanded = !this.isExpanded;
+
+        return false;
+      },
+      onMenuClick: function () {
+        this.isExpanded = false;
+      }
     }
   };
 </script>
 
 <style scoped>
+  .hamburger {
+    display: none;
+  }
+
   .header {
     background: rgb(var(--theme-white));
     border-bottom: 0.5rem solid rgb(var(--theme-red-ribbon));
@@ -75,5 +105,55 @@
   .footer ul li a.router-link-active,
   .footer ul li a:hover {
     color: rgb(var(--theme-red-ribbon));
+  }
+
+  @media (max-width: 899px) {
+    .header {
+      width: 100%;
+      text-align: center;
+    }
+
+    .header .hamburger {
+      display: inline-block;
+      width: 2.4rem;
+      height: 1.8rem;
+      background-image: url('../img/hamburger.svg');
+      background-repeat: no-repeat;
+      margin: 0 auto 2rem auto;
+    }
+
+    .header .hamburger:hover {
+      filter: invert(50%);
+    }
+
+    .header ul {
+      display: none;
+    }
+
+    .header.isExpanded ul {
+      display: block;
+    }
+
+    .header ul li {
+      display: block;
+    }
+
+    .header ul li  a {
+      font-size: 2.4rem;
+    }
+
+    .footer {
+      margin-top: 7rem;
+    }
+
+    .footer ul li {
+      display: block;
+    }
+
+    .footer ul li a {
+      display: block;
+      font-size: 2.4rem;
+      padding: 0.5em 0;
+    }
   }
 </style>

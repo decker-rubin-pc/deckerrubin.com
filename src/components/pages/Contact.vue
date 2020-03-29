@@ -204,4 +204,27 @@
     margin: 2em 0 0.5em 0;
     color: rgb(var(--theme-white));
   }
+
+  @media (max-width: 899px) {
+    .page-contact div[itemprop='mainContentOfPage'] {
+      grid-template-columns: auto;
+    }
+
+    .page-contact form {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page-contact form input[type='submit'] {
+      font-weight: 400;
+      display: block;
+      width: 100%;
+    }
+    .page-contact form input[type='submit'],
+    .page-contact form fieldset label,
+    .page-contact [itemtype="http://schema.org/Organization"] {
+      font-size: 2.4rem;
+    }
+  }
 </style>

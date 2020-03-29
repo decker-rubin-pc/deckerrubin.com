@@ -35,4 +35,12 @@
     height: 2.6rem;
     width: 18rem;
   }
+
+  @media (max-width: 899px) {
+    .small {
+      display: block;
+      height: 4rem;
+      width: 24.5rem;
+    }
+  }
 </style>

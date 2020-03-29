@@ -75,4 +75,37 @@
   .hero a:hover {
     background-color: rgb(var(--theme-red-ribbon));
   }
+
+  @media (max-width: 899px) {
+    .hero {
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: auto 85rem;
+      width: 100%;
+      height: 85rem;
+      padding-top: 85rem;
+    }
+
+    .hero div[itemprop=alternativeHeadline] {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      background: rgba(var(--theme-midnight), 1);
+      padding: 5rem;
+      width: 100%;
+      height: auto;
+    }
+
+    .hero p {
+      font-size: 2.4rem;
+    }
+
+    .hero a {
+      display: block;
+      text-align: center;
+      border-radius: 2em;
+      padding: 0.5em 1em;
+      font-size: 3.6rem;
+    }
+  }
 </style>

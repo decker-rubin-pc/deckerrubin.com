@@ -111,4 +111,21 @@
   article > footer > .copyright {
     grid-area: copyright;
   }
+
+  @media (max-width: 899px) {
+    article > footer {
+      display: block;
+      padding: 14rem 3.5rem;
+    }
+
+    article > footer .body {
+      font-size: 2.4rem;
+      line-height: 1.5em;
+    }
+
+    article > footer .copyright {
+      font-size: 2.4rem;
+      line-height: 1.5em;
+    }
+  }
 </style>
