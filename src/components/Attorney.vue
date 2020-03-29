@@ -1,14 +1,18 @@
 <template>
   <div class="attorney" itemprop="founder" itemscope itemtype="http://schema.org/Person" v-bind:class="className">
     <div class="heading">
-      <div>
+      <div class="name">
         <h2>
           <span itemprop="givenName">{{firstName}}</span>
           <span itemprop="familyName">{{lastName}}</span>
         </h2>
+      </div>
 
+      <div class="title">
         <h3 itemprop="jobTitle">{{jobTitle}}</h3>
+      </div>
 
+      <div class="contact">
         <span itemprop="email">
           <a v-bind:href="emailLink">{{email}}</a>
         </span>
@@ -82,9 +86,17 @@
   .heading {
     grid-area: heading;
     color: rgb(var(--theme-gunmetal));
+    padding: 5rem 8rem;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 5rem 8rem;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto 100%;
+    align-items: end;
+    justify-content: end;
   }
 
   .heading h2,
@@ -171,8 +183,42 @@
       margin: 0 0 8rem 0;
     }
 
+    .heading {
+      position: relative;
+      padding: 4rem 2rem;
+      background-position: top center;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto 100% auto;
+      grid-template-areas: 'name' 'title' '.' 'contact';
+      align-items: end;
+      justify-content: end;
+    }
+
+    .contact {
+      position: absolute;
+      bottom: -10rem;
+      width: 100%;
+      background: rgb(var(--theme-blue-charcoal));
+      padding: 2rem 4rem;
+      color: rgb(var(--theme-alto));
+    }
+
+    .heading a {
+      margin: 0.25em 0 0.25em 0;
+      color: rgb(var(--theme-alto));
+    }
+
     .heading h2 {
       font-size: 3.6rem;
+    }
+
+    .body {
+      margin-top: 10rem;
+      padding: 2rem 4rem;
+    }
+
+    .sidebar {
+      padding: 2rem 4rem;
     }
 
     .heading h3,

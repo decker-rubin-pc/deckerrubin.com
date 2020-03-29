@@ -183,6 +183,8 @@
 
   .attorney-jennifer .heading {
     background-image: url('../../img/profile-jennifer.jpg');
+    align-items: start;
+    justify-content: start;
   }
 
   .attorney-jennifer .squares-lg {

@@ -80,7 +80,7 @@
     .hero {
       background-position: top center;
       background-repeat: no-repeat;
-      background-size: auto 85rem;
+      background-size: cover;
       width: 100%;
       height: 85rem;
       padding-top: 85rem;
