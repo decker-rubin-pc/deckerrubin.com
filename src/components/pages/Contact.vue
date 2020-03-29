@@ -107,14 +107,14 @@
   }
 
   .page-contact form {
-    border-right: 1px solid rgb(var(--theme-gray));
-    margin-right: 6rem;
-    padding: 6em 6em 0 0;
+    border-right: 1px solid rgb(var(--theme-big-stone));
+    margin-right: 8rem;
+    padding: 1em 6em 0 0;
   }
 
   .page-contact form fieldset label {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5em;
     text-transform: uppercase;
   }
@@ -137,15 +137,18 @@
   }
 
   .page-contact form input[type='submit'] {
-    background: rgb(var(--theme-allports));
     border: none;
-    border-radius: 3rem;
-    color: var(--theme-alto);
-    font-size: 1.5rem;
     text-transform: uppercase;
     margin-top: 2em;
+    background-color: rgb(var(--theme-shiraz));
+    border-radius: 2em;
     padding: 1em 5em;
-    font-weight: 200;
+    color: rgb(var(--theme-white));
+    font-size: 1.4rem;
+    font-weight: 300;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 0.15rem;
   }
 
   .page-contact form input[type='submit']:hover {
@@ -154,11 +157,11 @@
   }
 
   .page-contact [itemtype='http://schema.org/Organization'] {
-    padding-top: 6em;
+    padding-top: 2em;
   }
 
   .page-contact address {
-    color: rgb(var(--theme-tundora));
+    color: rgb(var(--theme-white));
     font-style: normal;
   }
 
@@ -191,12 +194,12 @@
   .page-contact [itemprop='founder'] [itemprop='givenName'],
   .page-contact [itemprop='founder'] [itemprop='familyName'] {
     font-weight: bold;
-    color: rgb(var(--theme-shiraz));
+    color: rgb(var(--theme-white));
   }
 
   .page-contact [itemprop='founder']:nth-child(even) [itemprop='givenName'],
   .page-contact [itemprop='founder']:nth-child(even) [itemprop='familyName'] {
-    color: rgb(var(--theme-blue-jeans));
+    color: rgb(var(--theme-white));
   }
 
   .page-contact [itemprop='founder'] + span {
@@ -222,9 +225,13 @@
       width: 100%;
     }
     .page-contact form input[type='submit'],
-    .page-contact form fieldset label,
+    .page-contact form fieldset label {
+      font-size: 1.5rem;
+    }
+
     .page-contact [itemtype="http://schema.org/Organization"] {
-      font-size: 2.4rem;
+      font-size: 1.8rem;
+      margin-bottom: 2em;
     }
   }
 </style>

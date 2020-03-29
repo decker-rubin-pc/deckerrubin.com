@@ -65,16 +65,16 @@
   @media (max-width: 899px) {
     footer {
       display: block;
-      padding: 2rem 3.5rem;
+      padding: 5rem 3.5rem 2rem 3.5rem;
     }
 
     footer .body {
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       line-height: 1.5em;
     }
 
     footer .copyright {
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       line-height: 1.5em;
     }
   }

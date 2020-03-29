@@ -1,19 +1,26 @@
 .page {
   background: rgb(var(--theme-blue-charcoal));
   color: rgb(var(--theme-alto));
-  margin: 14rem 0 10rem 0;
-  padding: 0 0 30rem 0;
+  margin: 14rem 0 0 0;
+  padding: 0 0 10rem 0;
 }
 
 .page > div[itemprop=mainContentOfPage] {
   max-width: var(--page-content-max-width);
   margin: 16rem auto 0;
+  border-top: 1px solid rgb(var(--theme-big-stone));
+  padding: 8rem 0 0 0;
 }
 
 @media (max-width: 899px) {
   .page {
-    padding: 2rem 2rem 10rem 2rem;
-    margin: 14rem 0 6rem 0;
+    padding: 2rem 3rem 2rem 3rem;
+    margin: 12.9rem 0 0 0;
     max-width: 100%;
+  }
+  
+  .page > div[itemprop=mainContentOfPage] {
+    margin: 6rem auto 0;
+    padding: 4rem 0 0 0;
   }
 }

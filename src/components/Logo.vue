@@ -32,7 +32,7 @@
     background-image: url('../img/logo.svg');
     height: 4rem;
     justify-self: center;
-    margin: 5.4rem 0;
+    margin: 5rem 0 3rem 0;
     width: 24.5rem;
   }
 
@@ -45,13 +45,14 @@
   @media (max-width: 899px) {
     .small {
       display: block;
-      height: 4rem;
-      width: 24.5rem;
+      height: 3rem;
+      width: 18.375rem;
     }
 
     .large {
-      height: 6rem;
-      width: 36.75rem;
+      height: 3rem;
+      width: 18.375rem;
+      margin: 3rem 0 2rem 0;
     }
   }
 </style>

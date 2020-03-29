@@ -154,11 +154,6 @@
 </script>
 
 <style>
-  .page-attorneys [itemprop="mainContentOfPage"] {
-    border-top: 1px solid rgb(var(--theme-big-stone));
-    padding: 8rem 0 0 0;
-  }
-
   .attorney-bryan .heading {
     background-image: url('../../img/profile-bryan.jpg');
   }

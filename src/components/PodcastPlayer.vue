@@ -74,12 +74,12 @@
     margin: 0 0 1em 0;
     padding: 0 0 1em 0;
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 300;
   }
 
   h3 {
     font-size: 1.4rem;
-    font-weight: 100;
+    font-weight: 300;
     color: rgb(var(--theme-blue-jeans));
     margin: 0;
     padding: 0.5em 0;

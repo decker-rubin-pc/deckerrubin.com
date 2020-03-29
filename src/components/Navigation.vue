@@ -75,9 +75,17 @@
     color: rgb(var(--theme-gray));
     display: inline-block;
     font-size: 1.5rem;
-    padding: 1em 5em;
+    padding: 1em 2.5em;
     text-decoration: none;
     font-weight: 400;
+  }
+
+  .header ul li:first-child a {
+    padding-left: 4em;
+  }
+
+  .header ul li:last-child a {
+    padding-right: 4em;
   }
 
   .header ul li a.router-link-active,
@@ -120,7 +128,7 @@
       height: 1.8rem;
       background-image: url('../img/hamburger.svg');
       background-repeat: no-repeat;
-      margin: 0 auto 2rem auto;
+      margin: 0 auto 2rem 0;
     }
 
     .header .hamburger:hover {
@@ -129,6 +137,7 @@
 
     .header ul {
       display: none;
+      margin-bottom: 2rem;
     }
 
     .header.isExpanded ul {
@@ -139,12 +148,17 @@
       display: block;
     }
 
-    .header ul li  a {
-      font-size: 2.4rem;
+    .header ul li a {
+      font-size: 2rem;
+    }
+
+    .header ul li:first-child a,
+    .header ul li:last-child a {
+      padding: 1em 2.5em;
     }
 
     .footer {
-      margin-top: 7rem;
+      margin-top: 3rem;
     }
 
     .footer ul li {
@@ -153,8 +167,9 @@
 
     .footer ul li a {
       display: block;
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       padding: 0.5em 0;
+      font-weight: 300;
     }
   }
 </style>

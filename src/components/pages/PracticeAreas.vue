@@ -28,12 +28,13 @@
 <style scoped>
   [itemprop="mainContentOfPage"] > div {
     position: relative;
+    margin: 0 20rem;
   }
 
   h2 {
     position: relative;
     color: rgb(var(--theme-white));
-    font-weight: 500;
+    font-weight: 400;
     border-bottom: 2px solid rgb(var(--theme-midnight));
     padding: 0 0 1em 0;
     margin: 0;
@@ -44,6 +45,8 @@
     line-height: 1.75em;
     padding: 2em 0 8em 0;
     margin: 0;
+    color: rgb(var(--theme-alto));
+    font-weight: 300;
   }
 
   .squares-sm {
@@ -54,16 +57,16 @@
 
   @media (max-width: 899px) {
     [itemprop="mainContentOfPage"] {
-      text-align: center;
+      text-align: left;
     }
 
     [itemprop="mainContentOfPage"] > div {
       border-bottom: 2px solid rgb(var(--theme-midnight));
-      margin-bottom: 8rem;
+      margin: 0 0 4rem 0;
     }
 
     h2 {
-      font-size: 3.6rem;
+      font-size: 2.4rem;
       border: none;
       padding: 0;
       display: inline-block;
@@ -83,8 +86,8 @@
     }
 
     p {
-      font-size: 2.4rem;
-      padding: 2em 0 6em 0;
+      font-size: 1.8rem;
+      padding: 2em 0 3em 0;
     }
   }
 </style>

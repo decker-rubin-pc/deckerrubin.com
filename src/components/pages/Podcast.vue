@@ -3,10 +3,8 @@
     <headline>Podcast</headline>
 
     <div itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Organization">
-      <div class="squares-sm"></div>
-
       <div class="body">
-        <p>Welcome to our podcast!</p>
+        <h4>Welcome to our podcast!</h4>
 
         <p>
           We plan to post a podcast monthly (on or around the 1st of the month) in which we will both discuss cases
@@ -66,37 +64,31 @@
 <style scoped>
   .body {
     margin: 0 auto 10rem auto;
-    max-width: 50%;
+  }
+
+  h4 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    padding: 0;
+    margin: 0 0 1em 0;
   }
 
   p {
     font-size: 1.8rem;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.5em;
-    text-align: center;
+    text-align: left;
     padding: 0;
     margin: 0;
   }
 
-  .squares-sm {
-    margin: 0 auto 4rem auto;
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-
   @media (max-width: 899px) {
-    .body {
-      max-width: initial;
-    }
-
-    p {
+    h4 {
       font-size: 2.4rem;
     }
 
-    .squares-sm::before {
-      background-size: var(--size-square-md) var(--size-square-md);
-      width: var(--size-square-md);
-      height: var(--size-square-md);
+    p {
+      font-size: 1.8rem;
     }
   }
 </style>

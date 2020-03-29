@@ -1,5 +1,6 @@
 <template>
-  <div itemprop="headline" class="squares-xl">
+  <div itemprop="headline">
+    <div class="squares-lg"></div>
     <h1>
       <slot/>
     </h1>
@@ -9,19 +10,15 @@
 <style scoped>
   div[itemprop=headline] {
     position: relative;
-    top: 6.4rem;
+    top: 8.4rem;
     max-width: var(--page-content-max-width);
     margin: 0 auto;
-    height: var(--size-square-xl);
+    height: var(--size-square-lg);
   }
 
-  div[itemprop=headline]::before {
+  .squares-lg {
     position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    background-position-x: 10rem;
-    width: 100%;
+    top: -1rem;
   }
 
   h1 {
@@ -32,25 +29,26 @@
     font-weight: 400;
     color: rgb(var(--theme-white));
     z-index: 2;
-    line-height: var(--size-square-xl);
+    line-height: var(--size-square-lg);
     padding-top: 1.25rem;
   }
 
   @media (max-width: 899px) {
     div[itemprop=headline] {
-      height: var(--size-square-xxl);
+      top: 2rem;
+      height: var(--size-square-lg);
       margin: 0 auto;
     }
 
-    .squares-xl::before {
-      background-size: var(--size-square-xxl) var(--size-square-xxl);
-      width: var(--size-square-xxl);
-      height: var(--size-square-xxl);
+    .squares-lg::before {
+      background-size: var(--size-square-lg) var(--size-square-lg);
+      width: var(--size-square-lg);
+      height: var(--size-square-lg);
     }
 
     h1 {
-      font-size: 5rem;
-      line-height: var(--size-square-xxl);
+      font-size: 2.4rem;
+      line-height: var(--size-square-lg);
     }
   }
 </style>

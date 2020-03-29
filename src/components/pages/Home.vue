@@ -16,7 +16,7 @@
 <style scoped>
   .page-home {
     margin: 0;
-    padding: 10rem 0 20rem 0;
+    padding: 10rem 0 10rem 0;
   }
 
   .page-home > div {
@@ -52,7 +52,7 @@
 
   @media (max-width: 899px) {
     .page-home {
-      margin-top: 35rem;
+      margin-top: 33rem;
       padding: 10rem 4.5rem;
     }
 
@@ -61,7 +61,7 @@
     }
 
     .page-home h1 {
-      font-size: 4.8rem;
+      font-size: 3rem;
       margin-top: 0.25em;
     }
 
@@ -73,7 +73,7 @@
 
     .page-home p {
       text-align: left;
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
   }
 </style>

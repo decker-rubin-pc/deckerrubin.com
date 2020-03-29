@@ -42,4 +42,10 @@
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.25);
     text-align: center;
   }
+
+  @media (max-width: 899px) {
+    header {
+      height: auto;
+    }
+  }
 </style>

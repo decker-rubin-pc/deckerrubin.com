@@ -86,7 +86,7 @@
   .heading {
     grid-area: heading;
     color: rgb(var(--theme-gunmetal));
-    padding: 5rem 8rem;
+    padding: 8rem;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -103,12 +103,17 @@
   .heading h3 {
     margin: 0;
     padding: 0;
+  }
+
+  .heading h2 {
     font-weight: 500;
   }
 
   .heading h3 {
     text-transform: lowercase;
     margin: 0 0 2em 0;
+    font-weight: 300;
+    font-style: italic;
   }
 
   .heading a {
@@ -134,17 +139,21 @@
     padding: 7rem 8rem;
     font-size: 1.6rem;
     line-height: 1.5em;
-    font-weight: 100;
+    font-weight: 300;
   }
 
   .body p {
-    margin: 0 0 2em 0;
+    margin: 0 0 1em 0;
     padding: 0;
+  }
+
+  .body p:last-child {
+    margin: 0;
   }
 
   .sidebar {
     grid-area: sidebar;
-    padding: 4rem 5rem;
+    padding: 7rem 5rem;
     background: rgb(var(--theme-gunmetal));
   }
 
@@ -164,10 +173,10 @@
   }
 
   .sidebar ul li {
-    line-height: 2em;
+    line-height: 1.5em;
     font-size: 1.5rem;
-    font-weight: 100;
-    margin: 0 0 1em 0;
+    font-weight: 300;
+    margin: 0 0 0.5em 0;
   }
 
   @media (max-width: 899px) {
@@ -205,29 +214,33 @@
     }
 
     .heading a {
-      margin: 0.25em 0 0.25em 0;
+      margin: 0.25em 0;
       color: rgb(var(--theme-alto));
     }
 
     .heading h2 {
-      font-size: 3.6rem;
+      font-size: 2.4rem;
     }
 
     .body {
       margin-top: 10rem;
-      padding: 2rem 4rem;
+      padding: 4rem;
     }
 
     .sidebar {
-      padding: 2rem 4rem;
+      padding: 4rem;
     }
 
     .heading h3,
     .heading a,
     .body,
-    .sidebar h4,
     .sidebar ul li {
-      font-size: 2.4rem;
+      font-size: 2rem;
+    }
+
+    .sidebar h4 {
+      font-size: 1.6rem;
+      line-height: 1.5em;
     }
   }
 

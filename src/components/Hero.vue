@@ -1,14 +1,14 @@
 <template>
-    <section class="hero">
-      <div>
-        <div itemprop="alternativeHeadline">
-          <h1>Proudly serving<br/><b>Unions</b></h1>
-          <p>and their members in both the public and private sectors.</p>
-          <br/>
-          <router-link to="/contact" itemprop="url">Let's Talk</router-link>
-        </div>
+  <section class="hero">
+    <div>
+      <div itemprop="alternativeHeadline">
+        <h1>Proudly serving<br/><b>Unions</b></h1>
+        <p>and their members in both the public and private sectors.</p>
+        <br/>
+        <router-link to="/contact" itemprop="url">Let's Talk</router-link>
       </div>
-    </section>
+    </div>
+  </section>
 </template>
 
 <style scoped>
@@ -18,9 +18,9 @@
     background-image: url('../img/decker-rubin-feature-banner.jpg');
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 1325px auto;
+    background-size: cover;
     width: 100%;
-    height: 85rem;
+    height: calc(100vw * (1325 / 1920));
   }
 
   .hero > div {
@@ -34,12 +34,12 @@
   .hero div[itemprop=alternativeHeadline] {
     position: absolute;
     right: -5rem;
-    bottom: -10rem;
+    bottom: -5rem;
     background: rgba(var(--theme-midnight), 0.9);
     color: rgb(var(--theme-white));
     padding: 5rem;
-    width: 50rem;
-    height: 50rem;
+    width: 55rem;
+    height: 35rem;
   }
 
   .hero h1 {
@@ -64,10 +64,10 @@
   .hero a {
     background-color: rgb(var(--theme-shiraz));
     border-radius: 2em;
-    padding: 0.5em 1em;
+    padding: 1em 2em;
     color: rgb(var(--theme-white));
-    font-size: 1.8rem;
-    font-weight: 100;
+    font-size: 1.6rem;
+    font-weight: 300;
     display: inline-block;
     text-decoration: none;
   }
@@ -97,15 +97,14 @@
     }
 
     .hero p {
-      font-size: 2.4rem;
+      font-size: 1.8rem;
     }
 
     .hero a {
       display: block;
+      font-weight: 400;
+      width: 100%;
       text-align: center;
-      border-radius: 2em;
-      padding: 0.5em 1em;
-      font-size: 3.6rem;
     }
   }
 </style>
