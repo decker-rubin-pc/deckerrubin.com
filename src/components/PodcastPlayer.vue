@@ -9,14 +9,12 @@
       itemscope
       itemtype="http://schema.org/AudioObject"
       width="100%"
-      height="20"
+      v-bind:height="height"
       scrolling="no"
       frameborder="no"
       allow="autoplay"
       v-bind:title="title"
       v-bind:src="src"></iframe>
-
-    <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" src=""></iframe>
   </div>
 </template>
 
@@ -26,11 +24,41 @@
       id: Number,
       title: String,
       date: String,
-      description: String
+      description: String,
+      size: String
     },
     computed: {
+      height () {
+        switch (this.size) {
+          case 'sm':
+            return 20;
+          case 'lg':
+            return 300;
+          case 'md':
+          default:
+            return 166;
+        }
+      },
       src () {
-        return `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${this.id}&color=%23f00045&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&inverse=true`;
+        const options = {
+          url: `https%3A//api.soundcloud.com/tracks/${this.id}`,
+          color: '%23f00045',
+          auto_play: false,
+          hide_related: true,
+          show_comments: false,
+          show_user: false,
+          show_reposts: false,
+          show_teaser: false,
+          inverse: true,
+          visual: this.size !== 'sm'
+        };
+
+        const optionsStr = Object
+          .keys(options)
+          .map(key => `${key}=${options[key]}`)
+          .join('&');
+
+        return `https://w.soundcloud.com/player/?${optionsStr}`;
       }
     }
   };
@@ -59,6 +87,10 @@
 
   p {
     margin: 0;
-    padding: 2em 0 4em 0;
+    padding: 1em 0;
+  }
+
+  @media (max-width: 899px) {
+
   }
 </style>

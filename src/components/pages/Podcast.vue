@@ -5,12 +5,15 @@
     <div itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Organization">
       <div class="squares-sm"></div>
 
-      <p>
-        Welcome to our podcast!
-        <br/>We plan to post a podcast monthly (on or around the 1st of the month) in which we will both
-        <br/>discuss cases and news stories regarding public safety unions and public safety officials in Massachusetts.
-        <br/>We hope you enjoy. Please let us know what you think by emailing us.
-      </p>
+      <div class="body">
+        <p>Welcome to our podcast!</p>
+
+        <p>
+          We plan to post a podcast monthly (on or around the 1st of the month) in which we will both discuss cases
+          and news stories regarding public safety unions and public safety officials in Massachusetts.
+          We hope you enjoy. Please let us know what you think by emailing us.
+        </p>
+      </div>
 
       <podcast-player
         v-for="item in items"
@@ -19,6 +22,7 @@
         v-bind:title="item.title"
         v-bind:date="new Date(item.created_at).toLocaleDateString().replace(/\//gim, '.')"
         v-bind:description="item.description"
+        size="md"
       />
     </div>
   </section>
@@ -60,11 +64,18 @@
 </script>
 
 <style scoped>
-  div[itemprop=mainContentOfPage] p {
+  .body {
+    margin: 0 auto 10rem auto;
+    max-width: 50%;
+  }
+
+  p {
     font-size: 1.8rem;
     font-weight: 100;
+    line-height: 1.5em;
     text-align: center;
-    margin: 0 0 10rem 0;
+    padding: 0;
+    margin: 0;
   }
 
   .squares-sm {
@@ -73,7 +84,19 @@
     height: 1.6rem;
   }
 
-  p {
-    line-height: 1.5em;
+  @media (max-width: 899px) {
+    .body {
+      max-width: initial;
+    }
+
+    p {
+      font-size: 2.4rem;
+    }
+
+    .squares-sm::before {
+      background-size: var(--size-square-md) var(--size-square-md);
+      width: var(--size-square-md);
+      height: var(--size-square-md);
+    }
   }
 </style>
