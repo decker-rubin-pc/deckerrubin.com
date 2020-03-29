@@ -3,16 +3,19 @@
   --size-square-md: 2.7rem;
   --size-square-lg: 4.8rem;
   --size-square-xl: 17.5rem;
+  --size-square-xxl: 27.5rem;
 }
 
 .squares-sm::before,
 .squares-md::before,
 .squares-lg::before,
 .squares-xl::before,
+.squares-xxl::before,
 .squares-sm-flip::before,
 .squares-md-flip::before,
 .squares-lg-flip::before,
-.squares-xl-flip::before {
+.squares-xl-flip::before,
+.squares-xxl-flip::before {
   content: '';
   position: relative;
   display: inline-block;
@@ -29,14 +32,17 @@
 }
 
 .squares-xl::before,
-.squares-xl-flip::before {
+.squares-xxl::before,
+.squares-xl-flip::before,
+.squares-xxl-flip::before {
   background-image: url('../img/squares-xl.svg');
 }
 
 .squares-sm-flip::before,
 .squares-md-flip::before,
 .squares-lg-flip::before,
-.squares-xl-flip::before {
+.squares-xl-flip::before,
+.squares-xxl-flip::before {
   transform: scaleX(-1);
 }
 
@@ -66,4 +72,11 @@
   background-size: var(--size-square-xl) var(--size-square-xl);
   width: var(--size-square-xl);
   height: var(--size-square-xl);
+}
+
+.squares-xxl::before,
+.squares-xxl-flip::before {
+  background-size: var(--size-square-xxl) var(--size-square-xxl);
+  width: var(--size-square-xxl);
+  height: var(--size-square-xxl);
 }

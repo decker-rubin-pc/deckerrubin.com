@@ -35,4 +35,22 @@
     line-height: var(--size-square-xl);
     padding-top: 1.25rem;
   }
+
+  @media (max-width: 899px) {
+    div[itemprop=headline] {
+      height: var(--size-square-xxl);
+      margin: 0 auto;
+    }
+
+    .squares-xl::before {
+      background-size: var(--size-square-xxl) var(--size-square-xxl);
+      width: var(--size-square-xxl);
+      height: var(--size-square-xxl);
+    }
+
+    h1 {
+      font-size: 5rem;
+      line-height: var(--size-square-xxl);
+    }
+  }
 </style>
