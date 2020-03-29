@@ -78,12 +78,9 @@
 
   @media (max-width: 899px) {
     .hero {
-      background-position: top center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      height: 85rem;
-      padding-top: 85rem;
+      padding-top: calc(100vw * (1325 / 1920));
+      background-image: url('../img/decker-rubin-feature-banner-mobile.jpg');
+      margin-top: 12.9rem;
     }
 
     .hero div[itemprop=alternativeHeadline] {

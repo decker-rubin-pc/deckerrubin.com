@@ -52,7 +52,7 @@
 
   @media (max-width: 899px) {
     .page-home {
-      margin-top: 33rem;
+      margin-top: 31rem;
       padding: 10rem 4.5rem;
     }
 
