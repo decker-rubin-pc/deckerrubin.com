@@ -33,3 +33,9 @@ new Vue({
   router,
   data
 }).$mount(el);
+
+let path = localStorage.getItem('path');
+if (path) {
+  localStorage.removeItem('path');
+  router.push(path);
+}
