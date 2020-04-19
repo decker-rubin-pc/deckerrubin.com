@@ -6,8 +6,8 @@
       <attorney
         first-name="Bryan"
         last-name="Decker"
-        email="bryan@deckerrubin.com"
-        phone-number="123-456-7890"
+        email="bdecker@deckerrubin.com"
+        phone-number="617.877.1716"
         job-title="Partner"
         class-name="attorney-bryan">
         <template v-slot:description>
@@ -80,8 +80,8 @@
       <attorney
         first-name="Jennifer"
         last-name="Rubin"
-        email="jennifer@deckerrubin.com"
-        phone-number="123-456-7890"
+        email="jrubin@deckerrubin.com"
+        phone-number="617.515.9294"
         job-title="Partner"
         class-name="attorney-jennifer">
         <template v-slot:description>
