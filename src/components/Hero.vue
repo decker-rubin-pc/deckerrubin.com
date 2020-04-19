@@ -16,11 +16,12 @@
     position: relative;
     background-color: rgb(var(--theme-white));
     background-image: url('../img/decker-rubin-feature-banner.jpg');
-    background-position: top center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: calc(100vw * (1325 / 1920));
+    max-height: 100rem;
   }
 
   .hero > div {

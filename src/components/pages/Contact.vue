@@ -3,6 +3,14 @@
     <headline>Contact</headline>
 
     <div itemprop="mainContentOfPage">
+      <iframe
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.888689517451!2d-71.05465828454554!3d42.30224047919078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37ba7b3ff7bf3%3A0xf0dd7df5e1f34c2c!2s295%20Freeport%20St%2C%20Boston%2C%20MA%2002122!5e0!3m2!1sen!2sus!4v1585600104005!5m2!1sen!2sus"
+        frameborder="0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"></iframe>
+
       <form action="https://formspree.io/bryan@deckerrubin.com" method="post">
         <fieldset>
           <label for="full-name">Full Name</label>
@@ -73,7 +81,7 @@
 </script>
 
 <style scoped>
-  .page-contact h1 {
+  h1 {
     font-size: 2.8rem;
     font-weight: normal;
     display: inline-block;
@@ -83,44 +91,54 @@
     margin: 10rem 0 5rem 0;
   }
 
-  .page-contact a {
+  a {
     color: rgb(var(--theme-ship-cove));
     text-decoration: none;
   }
 
-  .page-contact a:hover {
+  a:hover {
     color: rgb(var(--theme-alto));
   }
 
-  .page-contact div[itemprop='mainContentOfPage'] {
+  div[itemprop='mainContentOfPage'] {
     display: grid;
     grid-template-columns: 70% auto;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "map map" "form address";
     text-align: left;
   }
 
-  .page-contact form,
-  .page-contact form fieldset {
+  .map {
+    border: 0;
+    width: 100%;
+    height: 50rem;
+    grid-area: map;
+    margin-bottom: 4rem;
+  }
+
+  form,
+  form fieldset {
     border: none;
     margin: 0;
     padding: 0;
   }
 
-  .page-contact form {
+  form {
+    grid-area: form;
     border-right: 1px solid rgb(var(--theme-big-stone));
     margin-right: 8rem;
     padding: 1em 6em 0 0;
   }
 
-  .page-contact form fieldset label {
+  form fieldset label {
     display: block;
     font-size: 1.3rem;
     margin-bottom: 0.5em;
     text-transform: uppercase;
   }
 
-  .page-contact form fieldset input,
-  .page-contact form fieldset textarea {
+  form fieldset input,
+  form fieldset textarea {
     background: rgb(var(--theme-white));
     border: 2px solid rgb(var(--theme-alto));
     display: block;
@@ -131,12 +149,12 @@
     outline: none;
   }
 
-  .page-contact form fieldset input:focus,
-  .page-contact form fieldset textarea:focus {
+  form fieldset input:focus,
+  form fieldset textarea:focus {
     border: 2px solid rgb(var(--theme-blue-jeans));
   }
 
-  .page-contact form input[type='submit'] {
+  form input[type='submit'] {
     border: none;
     text-transform: uppercase;
     margin-top: 2em;
@@ -151,85 +169,93 @@
     letter-spacing: 0.15rem;
   }
 
-  .page-contact form input[type='submit']:hover {
+  form input[type='submit']:hover {
     background: rgb(var(--theme-red-ribbon));
     cursor: pointer;
   }
 
-  .page-contact [itemtype='http://schema.org/Organization'] {
+  [itemtype='http://schema.org/Organization'] {
+    grid-area: address;
     padding-top: 2em;
   }
 
-  .page-contact address {
+  address {
     color: rgb(var(--theme-white));
     font-style: normal;
   }
 
-  .page-contact address a {
+  address a {
     color: rgb(var(--theme-ship-cove));
     display: block;
   }
 
-  .page-contact address [itemprop='legalName'] {
+  address [itemprop='legalName'] {
     font-weight: bold;
     margin: 0 0 0.5em 0;
     display: block;
   }
 
-  .page-contact [itemprop='founder'] [itemprop='telephone'],
-  .page-contact [itemprop='founder'] [itemprop='email'] {
+  [itemprop='founder'] [itemprop='telephone'],
+  [itemprop='founder'] [itemprop='email'] {
     display: block;
     margin: 0.5em 0 0 0;
   }
 
-  .page-contact address [itemprop='addressLocality']:before {
+  address [itemprop='addressLocality']:before {
     content: '\A';
     white-space: pre;
   }
 
-  .page-contact [itemprop='founder'] {
+  [itemprop='founder'] {
     margin-top: 3.5rem;
   }
 
-  .page-contact [itemprop='founder'] [itemprop='givenName'],
-  .page-contact [itemprop='founder'] [itemprop='familyName'] {
+  [itemprop='founder'] [itemprop='givenName'],
+  [itemprop='founder'] [itemprop='familyName'] {
     font-weight: bold;
     color: rgb(var(--theme-white));
   }
 
-  .page-contact [itemprop='founder']:nth-child(even) [itemprop='givenName'],
-  .page-contact [itemprop='founder']:nth-child(even) [itemprop='familyName'] {
+  [itemprop='founder']:nth-child(even) [itemprop='givenName'],
+  [itemprop='founder']:nth-child(even) [itemprop='familyName'] {
     color: rgb(var(--theme-white));
   }
 
-  .page-contact [itemprop='founder'] + span {
+  [itemprop='founder'] + span {
     display: block;
     margin: 2em 0 0.5em 0;
     color: rgb(var(--theme-white));
   }
 
   @media (max-width: 899px) {
-    .page-contact div[itemprop='mainContentOfPage'] {
+    div[itemprop='mainContentOfPage'] {
       grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "map" "form" "address";
     }
 
-    .page-contact form {
+    .map {
+      height: 25rem;
+    }
+
+    form {
       border: none;
       margin: 0;
       padding: 0;
     }
 
-    .page-contact form input[type='submit'] {
+    form input[type='submit'] {
       font-weight: 400;
       display: block;
       width: 100%;
     }
-    .page-contact form input[type='submit'],
-    .page-contact form fieldset label {
+
+    form input[type='submit'],
+    form fieldset label {
       font-size: 1.5rem;
     }
 
-    .page-contact [itemtype="http://schema.org/Organization"] {
+    [itemtype="http://schema.org/Organization"] {
       font-size: 1.8rem;
       margin-bottom: 2em;
     }

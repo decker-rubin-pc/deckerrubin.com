@@ -1,17 +1,19 @@
 <template>
   <footer>
-    <logo is-small/>
+    <div class="inner">
+      <logo is-small/>
 
-    <navigation v-bind:items="navigation" is-footer/>
+      <navigation v-bind:items="navigation" is-footer/>
 
-    <p class="body">
-      The material presented on this site is included with the understanding and agreement that Decker &amp;
-      Rubin, PC is not engaged in rendering legal or other professional services by posting said material. The
-      services of a competent professional should be sought if legal or other specific expert assistance is
-      required.
-    </p>
+      <p class="body">
+        The material presented on this site is included with the understanding and agreement that Decker &amp;
+        Rubin, PC is not engaged in rendering legal or other professional services by posting said material. The
+        services of a competent professional should be sought if legal or other specific expert assistance is
+        required.
+      </p>
 
-    <copyright/>
+      <copyright/>
+    </div>
   </footer>
 </template>
 
@@ -34,31 +36,33 @@
 
 <style scoped>
   footer {
-    background: rgb(var(--theme-white));
+    background: rgb(var(--theme-white-whale));
     color: rgb(var(--theme-gray));
+    padding: 10rem 1rem;
+  }
+
+  .inner {
     margin: 0 auto;
     max-width: var(--page-content-max-width);
-    padding: 10rem 1rem;
-
     display: grid;
     grid-template-columns: 18rem auto;
     grid-template-rows: auto auto auto;
     grid-template-areas: "logo navigation" "body body" "copyright copyright";
   }
 
-  footer > a {
+  a {
     grid-area: logo;
   }
 
-  footer > nav {
+  nav {
     grid-area: navigation;
   }
 
-  footer > .body {
+  .body {
     grid-area: body;
   }
 
-  footer > .copyright {
+  .copyright {
     grid-area: copyright;
   }
 
@@ -68,12 +72,18 @@
       padding: 5rem 3.5rem 2rem 3.5rem;
     }
 
-    footer .body {
+    .inner {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "logo" "navigation" "body" "copyright";
+    }
+
+    .body {
       font-size: 1.8rem;
       line-height: 1.5em;
     }
 
-    footer .copyright {
+    .copyright {
       font-size: 1.8rem;
       line-height: 1.5em;
     }

@@ -88,9 +88,6 @@
   p {
     margin: 0;
     padding: 1em 0;
-  }
-
-  @media (max-width: 899px) {
-
+    line-height: 1.5em;
   }
 </style>
