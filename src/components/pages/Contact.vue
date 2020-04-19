@@ -16,7 +16,7 @@
           <label for="full-name">Full Name</label>
           <input id="full-name" type="text" name="name" placeholder="First and Last" required=""/>
           <label for="email-address">Email Address</label>
-          <input id="email-address" type="email" name="_replyto" placeholder="email@domain.tld" required=""/>
+          <input id="email-address" type="email" name="_replyto" placeholder="name@domain.com" required=""/>
           <label for="phone">Phone</label>
           <input id="phone" type="text" name="phone" placeholder="xxx-xxx-xxxx" required=""/>
           <label for="message">Message</label>

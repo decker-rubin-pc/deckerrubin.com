@@ -15,3 +15,7 @@ html, body {
   padding: 0;
   scroll-behavior: smooth;
 }
+
+input, button {
+  -webkit-appearance: none;
+}
