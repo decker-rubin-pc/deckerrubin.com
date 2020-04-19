@@ -31,7 +31,7 @@
               illness caused by COVID-19 is work related. First Responders are among the highest risk groups for
               contracting COVID-19 (see
               <a href="https://www.nytimes.com/interactive/2020/03/15/business/economy/coronavirus-worker-risk.html"
-                 target="_blank">
+                 rel="noreferrer" target="_blank">
                 https://www.nytimes.com/interactive/2020/03/15/business/economy/coronavirus-worker-risk.html</a>
               ). When first responders are required to self-quarantine or develop symptoms due to an exposure at work,
               they should not be required to use any of their accrued sick or other types of leave. Officers should be
@@ -54,11 +54,12 @@
               exposure risk among first responders is rapidly evolving. The CDC is trying to strike a balance between
               minimizing exposure risk and maintaining adequate staffing levels for essential workers. Check the CDC
               website for up to date information. Here is the current guidance for EMS,
-              (<a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-for-ems.html" target="_blank">
+              (<a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-for-ems.html"
+                  rel="noreferrer" target="_blank">
                 https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-for-ems.html
               </a>), and for law enforcement,
               (<a href="https://www.cdc.gov/coronavirus/2019-ncov/community/guidance-law-enforcement.html"
-                  target="_blank">
+                  rel="noreferrer" target="_blank">
                 https://www.cdc.gov/coronavirus/2019-ncov/community/guidance-law-enforcement.html
               </a>).
             </li>
