@@ -1,11 +1,15 @@
 self.addEventListener('install', e => e.waitUntil(
   caches
-    .open('deckerrubin-v0')
+    .open('deckerrubin-v1')
     .then(cache => cache.addAll([
       '/',
       '/index.html',
-      '/css/app.css',
-      '/js/index.js'
+      '/404.html',
+      '/bundle.js',
+      '/icon.png',
+      '/icon.svg',
+      '/9f5e7625ea26cf950a32b811314532fb.jpg',
+      '/83423b18bd3836acada79f4db7bcd47f.jpg'
     ]))
 ));
 
