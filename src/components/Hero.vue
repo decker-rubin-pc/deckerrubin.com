@@ -20,8 +20,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: calc(100vw * (1325 / 1920));
+    height: calc(100vw * (800 / 1920));
     max-height: 100rem;
+    margin-top: 13.6rem;
   }
 
   .hero > div {
@@ -35,12 +36,12 @@
   .hero div[itemprop=alternativeHeadline] {
     position: absolute;
     right: -5rem;
-    bottom: -5rem;
+    bottom: -10rem;
     background: rgba(var(--theme-midnight), 0.9);
     color: rgb(var(--theme-white));
     padding: 5rem;
     width: 55rem;
-    height: 35rem;
+    height: 31rem;
   }
 
   .hero h1 {
