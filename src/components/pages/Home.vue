@@ -134,6 +134,7 @@
 
   p, ul, li {
     font-size: 1.6rem;
+    font-weight: 300;
     line-height: 2em;
     margin: 0;
     padding: 0;
@@ -177,6 +178,7 @@
 
   .covid-19 .content {
     max-height: 30rem;
+    font-weight: 300;
     overflow: hidden;
     margin-bottom: 6rem;
     transition: max-height 0.25s ease-in;
