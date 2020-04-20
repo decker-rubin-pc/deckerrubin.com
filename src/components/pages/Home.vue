@@ -69,7 +69,10 @@
             support you on the legal and labor front. Please stay safe.</p>
         </div>
 
-        <a v-on:click="toggleCovid" href="#" class="read-more">Read more <span class="chevron"></span></a>
+        <a v-on:click="toggleCovid" href="#" class="read-more">
+          <span class="text">Read more</span>
+          <span class="chevron"></span>
+        </a>
       </div>
     </div>
   </section>
@@ -81,8 +84,16 @@
       toggleCovid: function (e) {
         e.preventDefault();
 
-        const $el = document.querySelector('.covid-19');
-        $el && $el.classList.toggle('expanded');
+        const $covid = document.querySelector('.covid-19');
+
+        if ($covid) {
+          $covid.classList.toggle('expanded');
+
+          const isExpanded = $covid.classList.contains('expanded');
+
+          const $readMore = document.querySelector('a.read-more .text');
+          $readMore.innerHTML = isExpanded ? 'Read less' : 'Read more';
+        }
       }
     }
   };
@@ -181,11 +192,11 @@
     font-weight: 300;
     overflow: hidden;
     margin-bottom: 6rem;
-    transition: max-height 0.25s ease-in;
+    transition: max-height 0.5s linear;
   }
 
   .covid-19.expanded .content {
-    max-height: 100rem;
+    max-height: 200rem;
   }
 
   li::marker {
