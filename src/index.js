@@ -39,3 +39,8 @@ if (path) {
   localStorage.removeItem('path');
   router.push(path);
 }
+
+// Register the service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+}
