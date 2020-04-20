@@ -81,6 +81,7 @@
     .body {
       font-size: 1.8rem;
       line-height: 1.5em;
+      font-weight: 300;
     }
 
     .copyright {

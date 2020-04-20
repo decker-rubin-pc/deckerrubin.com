@@ -135,7 +135,7 @@
   p, ul, li {
     font-size: 1.6rem;
     font-weight: 300;
-    line-height: 2em;
+    line-height: 1.6em;
     margin: 0;
     padding: 0;
   }
