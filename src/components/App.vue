@@ -30,6 +30,41 @@
     },
     props: {
       navigation: Array
+    },
+    methods: {
+      checkWebP: () => {
+        const features = ['lossy', 'lossless', 'alpha', 'animation'];
+
+        const testImages = {
+          lossy: 'UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA',
+          lossless: 'UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==',
+          alpha: 'UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==',
+          animation: 'UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA'
+        };
+
+        let hasWebPSupport = false;
+
+        features.forEach(feature => {
+          const img = new Image();
+
+          img.onload = () => {
+            if (img.width && img.height) {
+              document.body.classList.add(`webp-${feature}`);
+            }
+          };
+
+          img.src = 'data:image/webp;base64,' + testImages[feature];
+
+          hasWebPSupport = true;
+        });
+
+        if (!hasWebPSupport) {
+          document.body.classList.add('no-webp');
+        }
+      }
+    },
+    beforeMount () {
+      this.checkWebP();
     }
   };
 </script>

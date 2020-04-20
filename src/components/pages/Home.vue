@@ -196,7 +196,7 @@
   }
 
   .covid-19.expanded .content {
-    max-height: 200rem;
+    max-height: 500rem;
   }
 
   li::marker {

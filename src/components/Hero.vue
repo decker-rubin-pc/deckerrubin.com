@@ -15,7 +15,6 @@
   .hero {
     position: relative;
     background-color: rgb(var(--theme-white));
-    background-image: url('../img/decker-rubin-feature-banner.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,6 +22,14 @@
     height: calc(100vw * (800 / 1920));
     max-height: 100rem;
     margin-top: 13.6rem;
+  }
+
+  body.no-webp .hero {
+    background-image: url('../img/decker-rubin-feature-banner.jpg');
+  }
+
+  body.webp-lossy .hero {
+    background-image: url('../img/decker-rubin-feature-banner.webp');
   }
 
   .hero > div {
@@ -81,8 +88,15 @@
   @media (max-width: 899px) {
     .hero {
       padding-top: calc(100vw * (1325 / 1920));
-      background-image: url('../img/decker-rubin-feature-banner-mobile.jpg');
       margin-top: 12.9rem;
+    }
+
+    body.no-webp .hero {
+      background-image: url('../img/decker-rubin-feature-banner-mobile.jpg');
+    }
+
+    body.webp-lossy .hero {
+      background-image: url('../img/decker-rubin-feature-banner-mobile.webp');
     }
 
     .hero div[itemprop=alternativeHeadline] {

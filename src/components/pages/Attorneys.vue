@@ -154,8 +154,12 @@
 </script>
 
 <style>
-  .attorney-bryan .heading {
+  body.no-webp .attorney-bryan .heading {
     background-image: url('../../img/profile-bryan.jpg');
+  }
+
+  body.webp-lossy .attorney-bryan .heading {
+    background-image: url('../../img/profile-bryan.webp');
   }
 
   .attorney-bryan .body {
@@ -177,9 +181,16 @@
   }
 
   .attorney-jennifer .heading {
-    background-image: url('../../img/profile-jennifer.jpg');
     align-items: start;
     justify-content: start;
+  }
+
+  body.no-webp .attorney-jennifer .heading {
+    background-image: url('../../img/profile-jennifer.jpg');
+  }
+
+  body.webp-lossy .attorney-jennifer .heading {
+    background-image: url('../../img/profile-jennifer.webp');
   }
 
   .attorney-jennifer .squares-lg {
