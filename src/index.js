@@ -4,6 +4,18 @@ import App from './components/App.vue';
 import { Attorneys, PracticeAreas, Contact, Home, Podcast } from './components/pages';
 import './css/app.css';
 
+// Register the service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', async () => {
+    try {
+      const registration = await navigator.serviceWorker.register('/sw.js');
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    } catch (ex) {
+      console.log('ServiceWorker registration failed: ', ex);
+    }
+  });
+}
+
 const routes = [
   { path: '/', component: Home, text: 'Home' },
   { path: '/attorneys', component: Attorneys, text: 'Attorneys' },
@@ -38,9 +50,4 @@ let path = localStorage.getItem('path');
 if (path) {
   localStorage.removeItem('path');
   router.push(path);
-}
-
-// Register the service worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
 }
