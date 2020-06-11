@@ -1,27 +1,28 @@
-<urlset
-  xmlns="http://www.google.com/schemas/sitemap/0.84"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.deckerrubin.com</loc>
     <changefreq>weekly</changefreq>
+    <lastmod>2020-06-11</lastmod>
   </url>
   <url>
     <loc>https://www.deckerrubin.com/attorneys</loc>
     <changefreq>weekly</changefreq>
+    <lastmod>2020-06-11</lastmod>
   </url>
   <url>
     <loc>https://www.deckerrubin.com/practice-areas</loc>
     <changefreq>weekly</changefreq>
+    <lastmod>2020-06-11</lastmod>
   </url>
   <url>
     <loc>https://www.deckerrubin.com/podcast</loc>
     <changefreq>weekly</changefreq>
+    <lastmod>2020-06-11</lastmod>
   </url>
   <url>
     <loc>https://www.deckerrubin.com/contact</loc>
     <changefreq>weekly</changefreq>
+    <lastmod>2020-06-11</lastmod>
   </url>
 </urlset>
