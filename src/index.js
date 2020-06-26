@@ -20,16 +20,11 @@ const routes = [
   { path: '/', component: Home, text: 'Home' },
   { path: '/attorneys', component: Attorneys, text: 'Attorneys' },
   { path: '/practice-areas', component: PracticeAreas, text: 'Practice Areas' },
-  { path: '/podcast', component: Podcast, text: 'Podcast' },
+  // { path: '/podcast', component: Podcast, text: 'Podcast' },
   { path: '/contact', component: Contact, text: 'Contact' }
 ];
 
-const navigation = [
-  { path: '/attorneys', text: 'Attorneys' },
-  { path: '/practice-areas', component: PracticeAreas, text: 'Practice Areas' },
-  { path: '/podcast', component: Podcast, text: 'Podcast' },
-  { path: '/contact', component: Contact, text: 'Contact' }
-];
+const navigation = routes.slice(1);
 
 const el = '#app';
 const router = new VueRouter({
