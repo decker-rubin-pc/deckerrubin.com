@@ -10,106 +10,13 @@
         from organizing to collective bargaining to contract servicing.
       </p>
     </div>
-
-    <div class="covid-19">
-      <div class="inner">
-        <div class="squares-sm"></div>
-        <h1 itemprop="headline">COVID-19 Legal Issues for First Responders</h1>
-        <h2>March 30, 2020</h2>
-
-        <div class="content">
-          <p>It goes without saying that the Coronavirus/COVID-19 Pandemic has changed life for all workers in ways that
-            would have been unbelievable only weeks ago. But while most of us are dealing with self-isolation without
-            work, or the realities of working remotely while trying to keep the kids occupied, our first responders are
-            on the front line of the epidemic. There is no telecommuting for the brave EMS workers, police officers and
-            firefighters who willingly report to work and necessarily expose themselves to COVID-19 in order to protect
-            and save lives. At this time (and this is fast evolving), these are some of the legal issues we are dealing
-            with on a daily basis as union lawyers for first responders:</p>
-
-          <ul>
-            <li>We have been successful in getting employers to adopt a (de facto, if not a de jure) presumption that
-              illness caused by COVID-19 is work related. First Responders are among the highest risk groups for
-              contracting COVID-19 (see
-              <a href="https://www.nytimes.com/interactive/2020/03/15/business/economy/coronavirus-worker-risk.html"
-                 rel="noreferrer" target="_blank">
-                https://www.nytimes.com/interactive/2020/03/15/business/economy/coronavirus-worker-risk.html</a>
-              ). When first responders are required to self-quarantine or develop symptoms due to an exposure at work,
-              they should not be required to use any of their accrued sick or other types of leave. Officers should be
-              carried as injured on duty under M.G.L. c. 41, §111F if they develop COVID-19.
-            </li>
-            <li>A number of COVID-19 first responder related bills are pending at the state house, including for a
-              presumption, hazardous duty pay, and others. We have been working with our union clients to submit letters
-              and testimony in support of these bills. We will post updates as bills (hopefully) become laws.
-            </li>
-            <li>We are seeing an increase in testing available to first responders. There is a first responder only
-              testing facility in Shrewsbury, and Boston was just able to open a facility for Boston first responders at
-              Suffolk Downs. Criteria to qualify for testing vary by facility and are evolving, so make sure you call
-              ahead and follow your department’s protocols before going to a testing site. We are advocating for more
-              testing availability, including for the ability of first responders to have non-symptomatic testing when
-              medically appropriate.
-            </li>
-            <li>We have been bargaining with police, fire and EMS employers regarding protocols for when first
-              responders
-              should be self-quarantining v. continuing to work following exposures. The CDC recommendations regarding
-              exposure risk among first responders is rapidly evolving. The CDC is trying to strike a balance between
-              minimizing exposure risk and maintaining adequate staffing levels for essential workers. Check the CDC
-              website for up to date information. Here is the current guidance for EMS,
-              (<a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-for-ems.html"
-                  rel="noreferrer" target="_blank">
-                https://www.cdc.gov/coronavirus/2019-ncov/hcp/guidance-for-ems.html
-              </a>), and for law enforcement,
-              (<a href="https://www.cdc.gov/coronavirus/2019-ncov/community/guidance-law-enforcement.html"
-                  rel="noreferrer" target="_blank">
-                https://www.cdc.gov/coronavirus/2019-ncov/community/guidance-law-enforcement.html
-              </a>).
-            </li>
-          </ul>
-          <p>Thank you for your commitment as you continue to work in this crisis, which is the worst of most of our
-            lifetimes. We continued to be honored to work for first responders, and will continue to do all we can to
-            support you on the legal and labor front. Please stay safe.</p>
-        </div>
-
-        <a v-on:click="toggleCovid" href="#" class="read-more">
-          <span class="text">Read more</span>
-          <span class="chevron"></span>
-        </a>
-      </div>
-    </div>
   </section>
 </template>
-
-<script>
-  export default {
-    methods: {
-      toggleCovid: function (e) {
-        e.preventDefault();
-
-        const $covid = document.querySelector('.covid-19');
-
-        if ($covid) {
-          $covid.classList.toggle('expanded');
-
-          const isExpanded = $covid.classList.contains('expanded');
-
-          const $readMore = document.querySelector('a.read-more .text');
-          $readMore.innerHTML = isExpanded ? 'Read less' : 'Read more';
-        }
-      }
-    }
-  };
-</script>
 
 <style scoped>
   .page-home {
     margin: 0;
     padding: 10rem 0 0 0;
-  }
-
-  .advantages {
-    margin: 0 auto 10rem auto;
-    text-align: left;
-    max-width: 86rem;
-    position: relative;
   }
 
   .squares-md {
@@ -131,6 +38,14 @@
     display: inline-block;
 
     margin: 0 0 1em 0;
+  }
+
+  .advantages {
+      margin: 0 auto;
+      padding-bottom: 10rem;
+      text-align: left;
+      max-width: 86rem;
+      position: relative;
   }
 
   .advantages h1 {
@@ -157,46 +72,6 @@
 
   li {
     margin-top: 1em;
-  }
-
-  .covid-19 {
-    position: relative;
-    background: rgb(var(--theme-white));
-    color: rgb(var(--theme-gunmetal));
-    padding: 10rem 0;
-  }
-
-  .covid-19 .inner {
-    position: relative;
-    margin: 0 auto;
-    text-align: left;
-    max-width: 86rem;
-  }
-
-  .covid-19 h1 {
-    font-weight: 400;
-    font-size: 2rem;
-    margin: 0 0 0.5em 0;
-    padding: 0;
-  }
-
-  .covid-19 h2 {
-    font-weight: 300;
-    font-size: 1.5rem;
-    margin: 0 0 3em 0;
-    padding: 0;
-  }
-
-  .covid-19 .content {
-    max-height: 30rem;
-    font-weight: 300;
-    overflow: hidden;
-    margin-bottom: 6rem;
-    transition: max-height 0.5s linear;
-  }
-
-  .covid-19.expanded .content {
-    max-height: 500rem;
   }
 
   li::marker {
